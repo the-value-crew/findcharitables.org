@@ -27,6 +27,9 @@ module.exports = {
         secondary: '#596579',
         muted: '#7B8698'
       },
+      facebook: '#1778F2',
+      twitter: '#55ACEE',
+      youtube: '#FF0000',
       backgroud: '#F4F7FB',
       transparent: 'transparent',
       current: 'currentColor',
@@ -37,7 +40,8 @@ module.exports = {
       yellow: colors.amber,
       green: {
         default: colors.emerald,
-        primary: '#01B279'
+        primary: '#01B279',
+        background: '#016646'
       },
       blue: colors.blue,
       indigo: colors.indigo,
@@ -65,8 +69,11 @@ module.exports = {
       12: '3rem',
       14: '3.5rem',
       16: '4rem',
+      17: '4.25rem',
+      18: '4.5rem',
       20: '5rem',
       24: '6rem',
+      25: '6.25rem',
       28: '7rem',
       32: '8rem',
       36: '9rem',
@@ -80,6 +87,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      '1/10': '10%',
     },
     animation: {
       none: 'none',
@@ -120,6 +128,7 @@ module.exports = {
       'right-bottom': 'right bottom',
       'right-top': 'right top',
       top: 'top',
+      'right-bottom-5': 'bottom right -12rem',
     },
     backgroundSize: {
       auto: 'auto',
@@ -291,9 +300,12 @@ module.exports = {
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
+      '28px': ['20px', { lineHeight: '34px' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+      '40px': ['40px', {lineHeight: '48px'}],
       '5xl': ['3rem', { lineHeight: '1' }],
+      '54px': ['54px', {lineHeight: '68px'}],
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
@@ -448,6 +460,7 @@ module.exports = {
       '37.5': '150px',
       '50.75': '203px',
       '132.25': '529px',
+      '166': '41.5rem',
       full: '100%',
       screen: '100vh',
     }),
@@ -469,7 +482,7 @@ module.exports = {
       '-2/4': '-50%',
       '-3/4': '-75%',
       '-full': '-100%',
-      'neg-20': '-100%',
+      'neg-70': '-70px',
     }),
     keyframes: {
       spin: {
@@ -811,6 +824,7 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
+      '9/20': '45%',
       '37.5': '150px',
       full: '100%',
       screen: '100vw',

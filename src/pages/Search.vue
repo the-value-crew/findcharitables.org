@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <div class="w-4/5 mx-auto">
+    <div class="w-4/5 mx-auto my-17">
         <div class="flex">
             <div class="w-1/4 p-4">
                 <div class="flex p-3 justify-between items-center rounded-lg bg-white my-1 cursor-pointer">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="w-3/4 p-4 min-h-screen">
-                <p class="font-bold text-5xl">23 child care related charities</p>
+                <p class="font-bold text-54px heading">23 child care related charities</p>
                 <div class="my-4 grid grid-cols-2 gap-2">
                     <div class="bg-white rounded-lg shadow p-5">
                         <g-image alt="Chimalaya Charity Foundation cover" src="~/assets/images/chimalaya-charity-foundation-cover.png" class="w-full h-50.75"/>
@@ -51,14 +51,14 @@
                                 <g-image alt="Chimalaya Charity Foundation logo" src="~/assets/images/chimalaya-charity-foundation-logo.png" class="h-20 w-20 rounded-full"/>
                             </div>
                             <div class="w-4/5">
-                                <a href="/charity-page/" class="font-bold text-2xl">Chimalaya Charity Foundation</a>
+                                <a href="/charity-page/" class="font-bold text-28px heading">Chimalaya Charity Foundation</a>
                                 <div class="flex items-center justify-between">
-                                    <p class="text-text-secondary mt-2 leading-5 text-justify text-sm">
+                                    <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden">
                                         We have been working for 100 years. Education, typewriting, child care, we do everything. 
                                         There is  nothing we dont do.nothing we dont do. If you have money to donate
                                     </p>
                                     <div class="p-2">
-                                        <button class="bg-transparent rounded border border-green-600 capitalize text-green-primary p-2">donate</button>
+                                        <button class="bg-transparent rounded border border-green-primary capitalize text-green-primary p-2">donate</button>
                                     </div>
                                 </div>
                             </div>
@@ -71,14 +71,14 @@
                                 <g-image alt="Save the children logo" src="~/assets/images/save-the-children-logo.png" class="h-20 w-20 rounded-full"/>
                             </div>
                             <div class="w-4/5">
-                                <a href="/charity-page/" class="font-bold text-2xl">Save the children</a>
+                                <a href="/charity-page/" class="font-bold text-28px heading">Save the children</a>
                                 <div class="flex items-center justify-between">
-                                    <p class="text-text-secondary mt-2 leading-5 text-justify text-sm">
+                                    <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden">
                                         We have been working for 100 years. Education, typewriting, child care, we do everything. 
-                                        There is  nothing we dont do.nothing we dont do. If you have money to donate
+                                        There is nothing we dont do.nothing we dont do. If you have money to donate
                                     </p>
                                     <div class="p-2">
-                                        <button class="bg-transparent rounded border border-green-600 capitalize text-green-primary p-2">donate</button>
+                                        <button class="bg-transparent rounded border border-green-primary capitalize text-green-primary p-2">donate</button>
                                     </div>
                                 </div>
                             </div>
