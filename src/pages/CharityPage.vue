@@ -2,7 +2,7 @@
   <Layout>
         <g-image alt="Charity Name" src="~/assets/images/save-the-children-cover-2.png" class="w-full h-132.25"/>   
         <div class="h-40 w-full bg-white py-4">
-            <div class="w-4/5 mx-auto flex justify-between items-start">
+            <div class="container flex justify-between items-start">
                 <div id="logo" class="flex items-start">
                     <div class="h-37.5 w-37.5 relative">
                         <div class="rounded-full h-37.5 w-37.5 shadow bg-white absolute top-neg-70">

@@ -1,7 +1,7 @@
 <template>
   <div class="layout bg-backgroud min-h-screen">
-    <div id="nav" class="bg-white">
-      <header class="w-4/5 mx-auto flex items-center justify-between h-25">
+    <div id="nav" class="bg-white z-top relative">
+      <header class="container flex items-center justify-between h-25">
         <strong>
           <g-link to="/">
             <g-image alt="The Value Crew" src="~/assets/images/site-logo.png" class="h-16"/>
@@ -22,7 +22,7 @@
     </div>
     <slot/>
     <div id="footer" class="mt-7 bg-white py-25">
-      <div class="w-4/5 m-auto flex justify-between">
+      <div class="container flex justify-between">
         <div id="quick-link">
           <p class="uppercase">quick link</p>
           <ol class="mt-5">
@@ -59,29 +59,3 @@ query {
   }
 }
 </static-query>
-
-<style>
-@font-face {
-    font-family: 'Georgia Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Georgia Regular'), url('../assets/fonts/georgia.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Gilroy Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Gilroy'), url('../assets/fonts/gilroy-bold.woff') format('woff');
-}
-
-body {
-  font-family: 'Georgia Regular';
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-.heading {
-  font-family: 'Gilroy Regular';
-}
-</style>

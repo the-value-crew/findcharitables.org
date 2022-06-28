@@ -6,17 +6,17 @@
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
-  "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.17",
-    "autoprefixer": "^9",
-    "gridsome": "^0.7.0",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
-  },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^2.0.8"
+  },
+  "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "autoprefixer": "^9.8.8",
+    "gridsome": "^0.7.23",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }

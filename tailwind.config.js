@@ -41,7 +41,8 @@ module.exports = {
       green: {
         default: colors.emerald,
         primary: '#01B279',
-        background: '#016646'
+        background: '#016646',
+        secondary: '#B3FFE6'
       },
       blue: colors.blue,
       indigo: colors.indigo,
@@ -59,15 +60,19 @@ module.exports = {
       3: '0.75rem',
       3.5: '0.875rem',
       4: '1rem',
+      4.5: '1.125rem',
       5: '1.25rem',
       6: '1.5rem',
+      6.5: '1.625rem',
       7: '1.75rem',
+      7.5: '1.875rem',
       8: '2rem',
       9: '2.25rem',
       10: '2.5rem',
       11: '2.75rem',
       12: '3rem',
       14: '3.5rem',
+      15: '3.75rem',
       16: '4rem',
       17: '4.25rem',
       18: '4.5rem',
@@ -75,18 +80,25 @@ module.exports = {
       24: '6rem',
       25: '6.25rem',
       28: '7rem',
+      30: '7.5rem',
       32: '8rem',
       36: '9rem',
+      37.5: '9.375rem',
       40: '10rem',
       44: '11rem',
       48: '12rem',
+      49.25: '12.3125rem',
       52: '13rem',
       56: '14rem',
       60: '15rem',
+      60.5: '15.125rem',
       64: '16rem',
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      160:'40rem',
+      180: '45rem',
+      191: '47.75rem',
       '1/10': '10%',
     },
     animation: {
@@ -174,6 +186,7 @@ module.exports = {
       '2xl': '1rem',
       '3xl': '1.5rem',
       full: '9999px',
+      '150px': '150px'
     },
     borderWidth: {
       DEFAULT: '1px',
@@ -632,7 +645,10 @@ module.exports = {
       white: ['2px dotted white', '2px'],
       black: ['2px dotted black', '2px'],
     },
-    padding: (theme) => theme('spacing'),
+    padding: (theme) => ({
+      ...theme('spacing'),
+      '1/10' : '10%',
+    }),
     placeholderColor: (theme) => theme('colors'),
     placeholderOpacity: (theme) => theme('opacity'),
     ringColor: (theme) => ({
@@ -839,6 +855,7 @@ module.exports = {
       30: '30',
       40: '40',
       50: '50',
+      top: '9999999'
     },
   },
   variantOrder: [

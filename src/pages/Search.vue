@@ -1,7 +1,7 @@
 <template>
   <Layout>
     
-    <div class="w-4/5 mx-auto my-17">
+    <div class="container my-17">
         <div class="flex">
             <div class="w-1/4 p-4">
                 <div class="flex p-3 justify-between items-center rounded-lg bg-white my-1 cursor-pointer">

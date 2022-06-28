@@ -1,0 +1,31 @@
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}
+
+@font-face {
+    font-family: 'Georgia Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Regular'), url('../assets/fonts/georgia.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy'), url('../assets/fonts/gilroy-bold.woff') format('woff');
+}
+
+body {
+  font-family: 'Georgia Regular';
+  margin:0;
+  padding:0;
+  line-height: 1.5;
+}
+.heading {
+  font-family: 'Gilroy Regular';
+}
