@@ -38,10 +38,10 @@
     <div class="bg-white">
       <div class="container py-25">
         <p class="heading font-bold text-54px">Add your charity to the list</p>
-        <input type="text" class="mt-9 border rounded-lg p-3 px-4 focus:outline-none w-1/4" 
+        <input type="text" class="mt-9 border rounded-lg p-3 px-4 focus:outline-none w-1/3" 
           placeholder="Organization name">
         
-        <fieldset class="rounded-lg border w-1/4 mt-7 p-3 flex">
+        <fieldset class="rounded-lg border w-1/3 mt-7 p-3 flex items-center">
           <legend class="text-text-muted text-xs">Phone</legend>
           <div class="border-r px-4">
             <g-image src="~/assets/images/nepal.png" class="h-5 w-5"/>

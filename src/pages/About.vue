@@ -20,7 +20,7 @@
               Donate Now
             </button>
           </div>
-          <div class="w-3/5">
+          <div class="w-3/5 pl-16">
             <g-image src="~/assets/images/who-are-we.png" class="w-full h-auto rounded-150px"/>
           </div>
         </div>

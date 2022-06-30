@@ -44,41 +44,23 @@
             <div class="w-3/4 p-4 min-h-screen">
                 <p class="font-bold text-54px heading">23 child care related charities</p>
                 <div class="my-4 grid grid-cols-2 gap-2">
-                    <div class="bg-white rounded-lg shadow p-5">
-                        <g-image alt="Chimalaya Charity Foundation cover" src="~/assets/images/chimalaya-charity-foundation-cover.png" class="w-full h-50.75"/>
+                    <div class="bg-white rounded-lg shadow p-5" v-for="edge in $static.charities.edges" :key="edge.node.id">
+                        <g-image :alt="edge.node.title + ' cover'" :src="edge.node.featured_media" class="w-full h-50.75"/>
                         <div class="flex justify-between mt-7">
                             <div class="w-20">
-                                <g-image alt="Chimalaya Charity Foundation logo" src="~/assets/images/chimalaya-charity-foundation-logo.png" class="h-20 w-20 rounded-full"/>
+                                <g-image :alt="edge.node.title + ' logo'" :src="edge.node.logo" class="h-20 w-20 rounded-full"/>
                             </div>
                             <div class="w-4/5">
-                                <a href="/charity-page/" class="font-bold text-28px heading">Chimalaya Charity Foundation</a>
+                                <div class="overflow-hidden text-ellipsis font-bold text-28px heading h-17">
+                                    <a :href="'/' + edge.node.slug" >{{ edge.node.title }}</a>
+                                </div>
                                 <div class="flex items-center justify-between">
-                                    <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden">
+                                    <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden w-73%">
                                         We have been working for 100 years. Education, typewriting, child care, we do everything. 
                                         There is  nothing we dont do.nothing we dont do. If you have money to donate
                                     </p>
                                     <div class="p-2">
-                                        <button class="bg-transparent rounded border border-green-primary capitalize text-green-primary p-2">donate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow p-5">
-                        <g-image alt="Save the children cover" src="~/assets/images/save-the-children-cover.png" class="w-full h-50.75"/>
-                        <div class="flex justify-between mt-7">
-                            <div class="w-20">
-                                <g-image alt="Save the children logo" src="~/assets/images/save-the-children-logo.png" class="h-20 w-20 rounded-full"/>
-                            </div>
-                            <div class="w-4/5">
-                                <a href="/charity-page/" class="font-bold text-28px heading">Save the children</a>
-                                <div class="flex items-center justify-between">
-                                    <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden">
-                                        We have been working for 100 years. Education, typewriting, child care, we do everything. 
-                                        There is nothing we dont do.nothing we dont do. If you have money to donate
-                                    </p>
-                                    <div class="p-2">
-                                        <button class="bg-transparent rounded border border-green-primary capitalize text-green-primary p-2">donate</button>
+                                        <a :href="'/' + edge.node.slug" class="bg-transparent rounded border border-green-primary capitalize text-green-primary p-2">donate</a>
                                     </div>
                                 </div>
                             </div>
@@ -91,16 +73,18 @@
   </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Search'
+<static-query>
+query {
+  charities: allCharity {
+    edges {
+      node {
+        id
+        title
+        slug
+        featured_media
+        logo
+      }
+    }
   }
 }
-</script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
+</static-query>

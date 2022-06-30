@@ -1,15 +1,15 @@
 <template>
   <Layout>
-        <g-image alt="Charity Name" src="~/assets/images/save-the-children-cover-2.png" class="w-full h-132.25"/>   
+        <g-image :alt="$context.title + ' cover'" :src="$context.featured_media" class="w-full h-132.25"/>   
         <div class="h-40 w-full bg-white py-4">
             <div class="container flex justify-between items-start">
                 <div id="logo" class="flex items-start">
                     <div class="h-37.5 w-37.5 relative">
                         <div class="rounded-full h-37.5 w-37.5 shadow bg-white absolute top-neg-70">
-                            <g-image alt="Charity Name" src="~/assets/images/save-the-children-logo.png" class="h-37.5 w-37.5"/>
+                            <g-image :alt="$context.title + ' logo'" :src="$context.logo" class="h-37.5 w-37.5"/>
                         </div>
                     </div>
-                    <p class="font-bold text-54px pl-8 heading">Save The Children</p>
+                    <p class="font-bold text-54px pl-8 heading">{{ $context.title }}</p>
                 </div>
                 <button class="rounded border border-green-primary text-green-primary py-4 px-7">
                     Donate <font-awesome class="ml-2" :icon="['fa', 'plus-circle']"/>
@@ -95,8 +95,11 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Profile'
-  }
+    name: "Charity Page Template",
+    metaInfo() {
+        return {
+            title: this.$context.title
+        }
+    }
 }
 </script>

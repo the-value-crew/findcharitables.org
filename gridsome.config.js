@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = {
   siteName: 'CSR',
+  titleTemplate: '%s',
   plugins: [],
   css: {
     loaderOptions: {
