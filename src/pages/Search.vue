@@ -88,3 +88,11 @@ query {
   }
 }
 </static-query>
+
+<script>
+export default {
+    metaInfo: {
+        title: 'Charity List'
+    }
+}
+</script>
