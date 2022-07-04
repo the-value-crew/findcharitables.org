@@ -47,7 +47,7 @@
             <g-image src="~/assets/images/nepal.png" class="h-5 w-5"/>
           </div>
           <input type="number" name="number" id="number" placeholder="Contact Number" 
-            class="w-full px-4 focus:outline-none">
+            class="w-full px-4 focus:outline-none" onwheel="return false;">
         </fieldset>
 
         <button class="bg-green-primary text-white rounded-md px-7.5 py-4.5 mt-4.5">

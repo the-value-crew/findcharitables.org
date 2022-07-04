@@ -45,14 +45,14 @@
                 <p class="font-bold text-54px heading">23 child care related charities</p>
                 <div class="my-4 grid grid-cols-2 gap-2">
                     <div class="bg-white rounded-lg shadow p-5" v-for="edge in $static.charities.edges" :key="edge.node.id">
-                        <g-image :alt="edge.node.title + ' cover'" :src="edge.node.featured_media" class="w-full h-50.75"/>
+                        <g-image :alt="edge.node.name + ' cover'" :src="edge.node.featured_media_medium" class="w-full h-50.75 rounded-lg"/>
                         <div class="flex justify-between mt-7">
                             <div class="w-20">
-                                <g-image :alt="edge.node.title + ' logo'" :src="edge.node.logo" class="h-20 w-20 rounded-full"/>
+                                <g-image :alt="edge.node.name + ' logo'" :src="edge.node.logo" class="h-20 w-20 rounded-full"/>
                             </div>
                             <div class="w-4/5">
                                 <div class="overflow-hidden text-ellipsis font-bold text-28px heading h-17">
-                                    <a :href="'/' + edge.node.slug" >{{ edge.node.title }}</a>
+                                    <a :href="'/' + edge.node.slug" >{{ edge.node.name }}</a>
                                 </div>
                                 <div class="flex items-center justify-between">
                                     <p class="text-text-secondary mt-2 leading-6 h-18 text-ellipsis overflow-hidden w-73%">
@@ -79,9 +79,11 @@ query {
     edges {
       node {
         id
-        title
+        name
         slug
-        featured_media
+        featured_media_large
+        featured_media_medium
+        featured_media_thumbnail
         logo
       }
     }
