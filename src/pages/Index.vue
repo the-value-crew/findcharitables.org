@@ -26,11 +26,11 @@
           <p class="heading text-lg">Donations recieved</p>
         </div>
         <div class="w-1/3">
-          <p class="heading font-bold text-40px">Rs.10 lakh+</p>
+          <p class="heading font-bold text-40px">Rs 10 lakh+</p>
           <p class="heading text-lg">Money donated</p>
         </div>
         <div class="w-1/3">
-          <p class="heading font-bold text-40px">Rs.5 lakh+</p>
+          <p class="heading font-bold text-40px">Rs 5 lakh+</p>
           <p class="heading text-lg">Donated Last Year</p>
         </div>
       </div>
