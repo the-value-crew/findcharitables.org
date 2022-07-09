@@ -4,41 +4,10 @@
     <div class="container my-17">
         <div class="flex">
             <div class="w-1/4 p-4">
-                <div class="flex p-3 justify-between items-center rounded-lg bg-white my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Child Care</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Education</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Environment</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Human Services</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">International</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Animals</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Zoo and Aquariums</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Arts and Culture</p>
-                    <p class="text-text-muted text-xs">(72)</p>
-                </div>
-                <div class="flex p-3 justify-between items-center rounded-lg my-1 cursor-pointer">
-                    <p class="text-text-primary text-base">Community Development</p>
-                    <p class="text-text-muted text-xs">(72)</p>
+                <div class="flex p-3 justify-between items-center rounded-lg bg-white my-1 cursor-pointer" 
+                    v-for="edge in $static.categories.edges" :key="edge.node.id">
+                    <p class="text-text-primary text-base" v-html="edge.node.name"></p>
+                    <p class="text-text-muted text-xs" v-html="'(' + edge.node.count + ')'"></p>
                 </div>
             </div>
             <div class="w-3/4 p-4 min-h-screen">
@@ -75,19 +44,28 @@
 
 <static-query>
 query {
-  charities: allCharity {
-    edges {
-      node {
-        id
-        name
-        slug
-        featured_media_large
-        featured_media_medium
-        featured_media_thumbnail
-        logo
-      }
+    charities: allCharity {
+        edges {
+            node {
+                id
+                name
+                slug
+                featured_media_large
+                featured_media_medium
+                featured_media_thumbnail
+                logo
+            }
+        }
     }
-  }
+    categories: allCategory {
+        edges {
+            node {
+                id
+                name
+                count
+            }
+        }
+    }
 }
 </static-query>
 

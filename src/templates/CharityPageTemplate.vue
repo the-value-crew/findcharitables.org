@@ -28,7 +28,7 @@ export default {
     name: "Charity Page Template",
     metaInfo() {
         return {
-            name: this.$context.name,
+            title: this.$context.name,
             meta: [
                 { name: 'robots', content: this.$context.robots },
                 { name: 'canonical', content: this.$context.canonical },

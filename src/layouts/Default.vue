@@ -16,7 +16,7 @@
           <g-link class="text-text-secondary ml-12" to="/about/">About Us</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/">Charities</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/">Contact Us</g-link>
-          <g-link class="text-white bg-green-primary rounded py-4 px-7 ml-12" to="/search/">Get listed</g-link>
+          <g-link class="text-white bg-green-primary rounded py-4 px-7 ml-12" to="/">Get listed</g-link>
         </nav>
       </header>
     </div>

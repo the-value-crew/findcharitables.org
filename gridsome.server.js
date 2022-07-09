@@ -6,13 +6,25 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const axios = require('axios')
+const algoliasearch = require('algoliasearch')
 
 module.exports = function (api) {
   api.loadSource(async actions => {
     const { data } = await axios.get(`https://thevaluecrew.com/wp-json/csr/v1/charities`)
+    const category_data = await axios.get(`https://thevaluecrew.com/wp-json/csr/v1/categories`)
     const collection = actions.addCollection('Charity')
+    const categoryCollection = actions.addCollection('Category')
+    const algolia = actions.addCollection('Algolia')
 
     for(const item of data) {
+      const category = []
+      if(item.category)
+      {
+        item.category.forEach(element => {
+          category.push(element.name)
+        });
+      }
+      
       collection.addNode({
         id: item.id,
         name: item.name,
@@ -21,7 +33,7 @@ module.exports = function (api) {
         featured_media_large: item.featured_image.large,
         featured_media_medium: item.featured_image.medium,
         featured_media_thumbnail: item.featured_image.thumbnail,
-        category: '',
+        category: category,
         logo: item.logo,
         canonical: item.metadata.canonical,
         og_locale: item.metadata.og_locale,
@@ -41,8 +53,23 @@ module.exports = function (api) {
                 + item.metadata.robots['max-image-preview'] + ', '
                 + item.metadata.robots['max-video-preview']
       })
+
+      //collection for algolia serchable
+      algolia.addNode({
+        objectID: item.id,
+        name: item.name
+      })
     }
-    
+
+    //make collection of category
+    for(const item of category_data.data) {
+      categoryCollection.addNode({
+        id: item.id,
+        name: item.name,
+        slug: item.slug,
+        count: item.count
+      })
+    }
   })
 
   api.createPages(async ({ createPage, graphql }) => {
