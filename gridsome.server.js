@@ -14,7 +14,7 @@ module.exports = function (api) {
     const category_data = await axios.get(`https://thevaluecrew.com/wp-json/csr/v1/categories`)
     const collection = actions.addCollection('Charity')
     const categoryCollection = actions.addCollection('Category')
-    const algolia = actions.addCollection('Algolia')
+    const algolia = []
 
     for(const item of data) {
       const category = []
@@ -54,10 +54,12 @@ module.exports = function (api) {
                 + item.metadata.robots['max-video-preview']
       })
 
-      //collection for algolia serchable
-      algolia.addNode({
+      //collection for algolia searchable
+      algolia.push({
         objectID: item.id,
-        name: item.name
+        name: item.name,
+        logo: item.logo,
+        slug: item.slug
       })
     }
 
@@ -70,6 +72,13 @@ module.exports = function (api) {
         count: item.count
       })
     }
+
+    const client = algoliasearch('IXZ8C9YQFK', '7eecd629f921a8d15548ade66fc1bfd6');
+    const index = client.initIndex('tvc-csr');
+    // index.clearObjects()
+    index.saveObjects(algolia).then(({ objectIDs }) => {
+      console.log(objectIDs);
+    });
   })
 
   api.createPages(async ({ createPage, graphql }) => {

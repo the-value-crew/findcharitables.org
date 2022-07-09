@@ -7,9 +7,20 @@
             <g-image alt="The Value Crew" src="~/assets/images/site-logo.png" class="h-16"/>
           </g-link>
         </strong>
-        <div class="border rounded-lg p-3 w-1/3 flex items-center">
-          <span class="p-1"><font-awesome :icon="['fa', 'search']" class="text-text-secondary"/></span>
-          <input type="search" name="search" placeholder="Search" class="focus:outline-none w-full p-1">
+        <div class="w-1/3 relative">
+          <div class="border rounded-lg p-3 flex items-center w-full">
+            <span class="p-1"><font-awesome :icon="['fa', 'search']" class="text-text-secondary"/></span>
+            <input type="search" name="search" placeholder="Search" class="focus:outline-none w-full p-1" v-on:input="search">
+          </div>
+          <div id="search-dropdown" class="bg-white absolute w-full py-4 px-2 rounded-b-lg hidden">
+            <a class="flex items-center px-4 py-2 hover:bg-backgroud cursor-pointer border-b" :href="'/'+result.slug" v-for="result in searchResult" :key="result.slug">
+              <div id="logo">
+                <g-image :src="result.logo" class="w-12 h-12 rounded-full"/>
+              </div>
+              <div class="ml-4" v-html="result['_highlightResult'].name.value">
+              </div>
+            </a>
+          </div>
         </div>
         <nav class="flex items-center">
           <g-link class="text-text-secondary" to="/">Home</g-link>
@@ -52,10 +63,44 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+  import algoliasearch from 'algoliasearch';
+  export default {
+    data() {
+      return {
+        searchResult: []
+      }
+    },
+    methods: {
+      search(e) {
+        this.searchResult = []
+        const client = algoliasearch('IXZ8C9YQFK', '179bfd07cb33f063b95025dc745a9648');
+        const index = client.initIndex('tvc-csr');
+        const query = e.target.value
+
+        index.search(query).then(({ hits }) => {
+          var dropdown = document.getElementById('search-dropdown')
+          if(hits.length != 0)
+          {
+            dropdown.classList.remove("hidden");
+          }
+          else
+          {
+            dropdown.classList.add("hidden");
+          }
+          hits.forEach(element => {
+            console.log(element)
+            this.searchResult.push(element)
+          });
+        });
+      }
+    }
   }
-}
-</static-query>
+</script>
+
+<style>
+  em {
+    background-color: #F4F7FB;
+    font-style: normal;
+  }
+</style>
