@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "algoliasearch": "^4.13.1",
     "autoprefixer": "^9.8.8",
     "axios": "^0.27.2",
     "gridsome": "^0.7.23",
