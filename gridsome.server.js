@@ -75,10 +75,12 @@ module.exports = function (api) {
 
     const client = algoliasearch('IXZ8C9YQFK', '7eecd629f921a8d15548ade66fc1bfd6');
     const index = client.initIndex('tvc-csr');
-    // index.clearObjects()
-    index.saveObjects(algolia).then(({ objectIDs }) => {
-      console.log(objectIDs);
-    });
+    index.clearObjects().then(() => {
+      index.saveObjects(algolia).then(({ objectIDs }) => {
+        console.log(objectIDs);
+      });
+    })
+    
   })
 
   api.createPages(async ({ createPage, graphql }) => {
