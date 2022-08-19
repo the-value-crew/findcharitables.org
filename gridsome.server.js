@@ -44,7 +44,6 @@ module.exports = function (api) {
         og_site_name: item.metadata.og_site_name,
         article_publisher: item.metadata.article_publisher,
         article_modified_time: item.metadata.article_modified_time,
-        author: item.metadata.author,
         twitter_card: item.metadata.twitter_card,
         reading_time: item.metadata.twitter_misc["Est. reading time"],
         robots: item.metadata.robots.index + ', ' 
@@ -85,7 +84,7 @@ module.exports = function (api) {
 
   api.createPages(async ({ createPage, graphql }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
-    const { data } = await graphql(`{
+    const {data} = await graphql(`{
       allCharity {
         edges {
           node {
@@ -107,7 +106,6 @@ module.exports = function (api) {
             og_site_name
             article_publisher
             article_modified_time
-            author
             twitter_card
             reading_time
             robots
@@ -115,8 +113,6 @@ module.exports = function (api) {
         }
       }
     }`)
-
-    console.log("graphql datas : " + data)
 
     data.allCharity.edges.forEach(({ node }) => {
       createPage({
