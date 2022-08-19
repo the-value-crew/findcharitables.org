@@ -116,6 +116,8 @@ module.exports = function (api) {
       }
     }`)
 
+    console.log("graphql datas : " + data)
+
     data.allCharity.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,
