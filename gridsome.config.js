@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer')
 module.exports = {
   siteName: 'CSR',
   titleTemplate: '%s',
+  // icon: './src/assets/images/findcharitables.png',
   plugins: [],
   css: {
     loaderOptions: {

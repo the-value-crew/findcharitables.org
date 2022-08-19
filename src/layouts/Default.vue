@@ -4,7 +4,7 @@
       <header class="container flex items-center justify-between h-25">
         <strong>
           <g-link to="/">
-            <g-image alt="The Value Crew" src="~/assets/images/site-logo.png" class="h-16"/>
+            <g-image alt="The Value Crew" src="~/assets/images/findcharitables.png" class="h-16"/>
           </g-link>
         </strong>
         <div class="w-1/3 relative">
