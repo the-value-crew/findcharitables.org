@@ -4,7 +4,7 @@
       <header class="container flex items-center justify-between h-25">
         <strong>
           <g-link to="/">
-            <g-image alt="The Value Crew" src="~/assets/images/findcharitables.png" class="h-16 w-36"/>
+            <g-image alt="The Value Crew" src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
           </g-link>
         </strong>
         <div class="w-1/3 relative">
@@ -51,7 +51,7 @@
           </ol>
         </div>
         <div id="logo">
-          <g-image src="~/assets/images/findcharitables.png" class="h-16 w-36"/>
+          <g-image src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
         </div>
         <div id="social-media">
           <a href="#"><font-awesome :icon="['fab', 'facebook-square']" class="text-facebook px-3.5" size="2xl"/></a>

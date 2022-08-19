@@ -201,7 +201,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Find Charitables'
   },
   methods: {
     toggleCollaspe(e) {
