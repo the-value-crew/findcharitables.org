@@ -2,7 +2,11 @@
 @tailwind components;
 
 .container {
-    @apply w-11/12 md:w-4/5 m-auto;
+    @apply w-11/12 xl:w-4/5 m-auto;
+}
+
+.non-container {
+    @apply w-full m-0;
 }
 
 @tailwind utilities;

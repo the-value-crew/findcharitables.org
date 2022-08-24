@@ -1,13 +1,13 @@
 <template>
-  <div class="layout bg-backgroud min-h-screen">
+  <div class="layout xl:bg-backgroud min-h-screen">
     <div id="nav" class="bg-white z-top relative">
-      <header class="container md:flex md:items-center md:justify-between h-25">
+      <header class="container xl:flex items-center xl:justify-between h-25 pt-4 xl:pt-0">
         <strong>
           <g-link to="/">
             <g-image alt="The Value Crew" src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
           </g-link>
         </strong>
-        <div class="w-1/3 relative hidden md:block">
+        <div class="w-1/3 relative hidden xl:block">
           <div class="border rounded-lg p-3 flex items-center w-full">
             <span class="p-1"><font-awesome :icon="['fa', 'search']" class="text-text-secondary"/></span>
             <input type="search" name="search" placeholder="Search" class="focus:outline-none w-full p-1" v-on:input="search">
@@ -22,7 +22,7 @@
             </a>
           </div>
         </div>
-        <nav class="flex items-center hidden md:block">
+        <nav class="flex items-center hidden xl:block">
           <g-link class="text-text-secondary" to="/">Home</g-link>
           <g-link class="text-text-secondary ml-12" to="/about/">About Us</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/">Charities</g-link>
@@ -32,8 +32,8 @@
       </header>
     </div>
     <slot/>
-    <div id="footer" class="mt-7 bg-white md:py-25">
-      <div class="container hidden md:block">
+    <div id="footer" class="mt-7 bg-white xl:py-25">
+      <div class="container hidden xl:block">
         <div class="flex justify-between">
           <div id="quick-link">
             <p class="uppercase">quick link</p>
@@ -62,9 +62,9 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-between items-center px-4 md:hidden">
+      <div class="flex justify-between items-center px-4 xl:hidden">
         <p class="text-xs text-center">&copy;	<span class="pl-1">The value crew 2022</span></p>
-        <g-image src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
+        <g-image src="~/assets/images/findcharitables.png" class="h-10 w-auto"/>
       </div>
     </div>
   </div>
