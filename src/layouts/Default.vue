@@ -1,13 +1,13 @@
 <template>
   <div class="layout bg-backgroud min-h-screen">
     <div id="nav" class="bg-white z-top relative">
-      <header class="container flex items-center justify-between h-25">
+      <header class="container md:flex md:items-center md:justify-between h-25">
         <strong>
           <g-link to="/">
             <g-image alt="The Value Crew" src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
           </g-link>
         </strong>
-        <div class="w-1/3 relative">
+        <div class="w-1/3 relative hidden md:block">
           <div class="border rounded-lg p-3 flex items-center w-full">
             <span class="p-1"><font-awesome :icon="['fa', 'search']" class="text-text-secondary"/></span>
             <input type="search" name="search" placeholder="Search" class="focus:outline-none w-full p-1" v-on:input="search">
@@ -22,7 +22,7 @@
             </a>
           </div>
         </div>
-        <nav class="flex items-center">
+        <nav class="flex items-center hidden md:block">
           <g-link class="text-text-secondary" to="/">Home</g-link>
           <g-link class="text-text-secondary ml-12" to="/about/">About Us</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/">Charities</g-link>
@@ -32,32 +32,39 @@
       </header>
     </div>
     <slot/>
-    <div id="footer" class="mt-7 bg-white py-25">
-      <div class="container flex justify-between">
-        <div id="quick-link">
-          <p class="uppercase">quick link</p>
-          <ol class="mt-5">
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Sign up</a></li>
-          </ol>
+    <div id="footer" class="mt-7 bg-white md:py-25">
+      <div class="container hidden md:block">
+        <div class="flex justify-between">
+          <div id="quick-link">
+            <p class="uppercase">quick link</p>
+            <ol class="mt-5">
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Sign up</a></li>
+            </ol>
+          </div>
+          <div id="support">
+            <p class="uppercase">support</p>
+            <ol class="mt-5">
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Legal page</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ol>
+          </div>
+          <div id="logo">
+            <g-image src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
+            <p class="text-xs text-center">&copy;	<span class="pl-1">The value crew 2022</span></p>
+          </div>
+          <div id="social-media">
+            <a href="#"><font-awesome :icon="['fab', 'facebook-square']" class="text-facebook px-3.5" size="2xl"/></a>
+            <a href="#"><font-awesome :icon="['fab', 'twitter-square']" class="text-twitter px-3.5" size="2xl"/></a>
+            <a href="#"><font-awesome :icon="['fab', 'youtube-square']" class="text-youtube px-3.5" size="2xl"/></a>
+          </div>
         </div>
-        <div id="support">
-          <p class="uppercase">support</p>
-          <ol class="mt-5">
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Legal page</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ol>
-        </div>
-        <div id="logo">
-          <g-image src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
-        </div>
-        <div id="social-media">
-          <a href="#"><font-awesome :icon="['fab', 'facebook-square']" class="text-facebook px-3.5" size="2xl"/></a>
-          <a href="#"><font-awesome :icon="['fab', 'twitter-square']" class="text-twitter px-3.5" size="2xl"/></a>
-          <a href="#"><font-awesome :icon="['fab', 'youtube-square']" class="text-youtube px-3.5" size="2xl"/></a>
-        </div>
+      </div>
+      <div class="flex justify-between items-center px-4 md:hidden">
+        <p class="text-xs text-center">&copy;	<span class="pl-1">The value crew 2022</span></p>
+        <g-image src="~/assets/images/findcharitables.png" class="h-16 w-auto"/>
       </div>
     </div>
   </div>
