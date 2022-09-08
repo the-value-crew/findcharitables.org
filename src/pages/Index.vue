@@ -140,7 +140,9 @@
           placeholder="Organization name"
         />
 
-        <fieldset class="rounded-lg border xl:w-1/3 mt-7 p-3 flex items-center mb-8">
+        <fieldset
+          class="rounded-lg border xl:w-1/3 mt-7 p-3 flex items-center mb-8"
+        >
           <legend class="text-text-muted text-xs">Phone</legend>
           <div class="border-r px-4">
             <g-image src="~/assets/images/nepal.png" class="h-5 w-5" />
@@ -187,8 +189,9 @@
                 Search for charities.
               </p>
               <p class="text-text-secondary">
-                Go into the search bar and type in the type of charity you'd
-                like to donate to.
+                Head on to the organization page and choose the type of charity
+                you want to donate to (an orphanage, old-age home, schools
+                etc.). You can also search for the organizations here.
               </p>
             </li>
             <li class="my-10">
@@ -196,14 +199,21 @@
                 Select a charity.
               </p>
               <p class="text-text-secondary">
-                Find the perfect charity with values that aligns with yours
+                Select the perfect organization that aligns with your values Go
+                through their details to scale their credibility. We even
+                recommend contacting them and inquire how your charity is being
+                used.
               </p>
             </li>
             <li>
               <p class="heading text-lg font-medium text-text-primary">
                 Donate
               </p>
-              <p class="text-text-secondary">Donate any amount as you desire</p>
+              <p class="text-text-secondary">
+                We are just the bridge between you and the charitables. You need
+                to donate directly to the organization. You can donate in form
+                of :money, goods or service.
+              </p>
             </li>
           </ol>
         </div>
@@ -251,7 +261,7 @@
               @click="toggleCollaspe"
             >
               <p class="heading font-medium text-lg w-full">
-                Where am i donating?
+                Who am I donating to?
               </p>
               <div class="plus hidden">
                 <font-awesome
@@ -276,9 +286,11 @@
                 ease-in-out
               "
             >
-              Everything you need to know about the product and billing. Can't
-              find the answer you're looking for? Please send us your queries.
-              We will answer them.
+              You are directly donating to the organization of your choice. We
+              do not keep anything for ourselves and are not a middleman.
+              However, if you like the platform, consider donating to us. We
+              have many ideas to improve the platform. Your support will help us
+              to bring these ideas to life.
             </p>
           </div>
 
@@ -288,7 +300,7 @@
               @click="toggleCollaspe"
             >
               <p class="heading font-medium text-lg w-full">
-                Can I undo my donation?
+                How do I know my donations are making an impact?
               </p>
               <div class="plus">
                 <font-awesome
@@ -314,9 +326,10 @@
                 hidden
               "
             >
-              Everything you need to know about the product and billing. Can't
-              find the answer you're looking for? Please send us your queries.
-              We will answer them.
+              As a donor, you are responsible for choosing the organization you
+              want to help, the one that aligns with your values. We even
+              recommend contacting them to inquire how the donations will be
+              used.
             </p>
           </div>
 
@@ -326,7 +339,7 @@
               @click="toggleCollaspe"
             >
               <p class="heading font-medium text-lg w-full">
-                How many charities have you listed?
+                Where is the charity I am searching for?
               </p>
               <div class="plus">
                 <font-awesome
@@ -352,9 +365,9 @@
                 hidden
               "
             >
-              Everything you need to know about the product and billing. Can't
-              find the answer you're looking for? Please send us your queries.
-              We will answer them.
+              We are continuously looking to add organizations to our database.
+              If you know one help to instill the culture of giving by adding
+              the organization to our platform here.
             </p>
           </div>
 
@@ -363,7 +376,9 @@
               class="flex justify-between items-center my-9 cursor-pointer"
               @click="toggleCollaspe"
             >
-              <p class="heading font-medium text-lg w-full">Is this legit?</p>
+              <p class="heading font-medium text-lg w-full">
+                What can I donate?
+              </p>
               <div class="plus">
                 <font-awesome
                   :icon="['fa', 'circle-plus']"
@@ -388,9 +403,10 @@
                 hidden
               "
             >
-              Everything you need to know about the product and billing. Can't
-              find the answer you're looking for? Please send us your queries.
-              We will answer them.
+              The type of donations an organization recieves can be found out in
+              their respective pages. We encourage the organizations to not only
+              deal in money but also clothes, food, other goods and even
+              volunteers.
             </p>
           </div>
         </div>
