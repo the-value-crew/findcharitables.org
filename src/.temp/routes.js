@@ -1,8 +1,8 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--charity-page-template-vue" */ "/Users/shrijalkaphle/Documents/code/tvc-csr/src/templates/CharityPageTemplate.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--search-vue" */ "/Users/shrijalkaphle/Documents/code/tvc-csr/src/pages/Search.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/shrijalkaphle/Documents/code/tvc-csr/src/pages/About.vue")
-const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/shrijalkaphle/Documents/code/tvc-csr/node_modules/gridsome/app/pages/404.vue")
-const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/shrijalkaphle/Documents/code/tvc-csr/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--templates--charity-page-template-vue" */ "/Users/mac/Projects/csr/src/templates/CharityPageTemplate.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--pages--search-vue" */ "/Users/mac/Projects/csr/src/pages/Search.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/mac/Projects/csr/src/pages/About.vue")
+const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/mac/Projects/csr/node_modules/gridsome/app/pages/404.vue")
+const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/mac/Projects/csr/src/pages/Index.vue")
 
 export default [
   {

@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 
-import { faPlusCircle, faSearch, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle, faSearch, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
 
 config.autoAddCss = false;
@@ -18,7 +18,8 @@ library.add(
   faFacebookSquare,
   faTwitterSquare,
   faYoutubeSquare,
-  faMinusCircle
+  faMinusCircle,
+  faTimesCircle
 )
 
 export default function (Vue, { router, head, isClient }) {
