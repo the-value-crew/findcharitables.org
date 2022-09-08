@@ -339,7 +339,7 @@
               @click="toggleCollaspe"
             >
               <p class="heading font-medium text-lg w-full">
-                Where is the charity I am searching for?
+                I cannot find the charity I am searching for.
               </p>
               <div class="plus">
                 <font-awesome
