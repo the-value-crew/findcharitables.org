@@ -103,15 +103,15 @@
     >
       <div class="container xl:flex justify-between items-center md:py-25 py-6">
         <div class="xl:w-1/3">
-          <p class="heading font-bold text-28px xl:text-40px">985+</p>
+          <p class="heading font-bold text-28px xl:text-40px">0+</p>
           <p class="heading xl:text-lg">Donations recieved</p>
         </div>
         <div class="xl:w-1/3 my-4 xl:mx-0">
-          <p class="heading font-bold text-28px xl:text-40px">Rs 10 lakh+</p>
+          <p class="heading font-bold text-28px xl:text-40px">Rs 0 lakh+</p>
           <p class="heading xl:text-lg">Money donated</p>
         </div>
         <div class="xl:w-1/3">
-          <p class="heading font-bold text-28px xl:text-40px">Rs 5 lakh+</p>
+          <p class="heading font-bold text-28px xl:text-40px">Rs 0 lakh+</p>
           <p class="heading xl:text-lg">Donated Last Year</p>
         </div>
         <g-image
@@ -209,8 +209,8 @@
         </div>
         <div class="xl:w-1/2 mt-5 xl:mt-0 pl-4">
           <g-image
-            src="~/assets/images/how-it-works.png"
-            class="h-auto w-full"
+            src="~/assets/images/how-it-works-v2.png"
+            class="h-auto w-80"
           />
         </div>
       </div>

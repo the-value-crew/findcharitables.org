@@ -74,7 +74,7 @@
             />
           </g-link>
         </strong>
-        <div class="w-1/3 relative hidden xl:block">
+        <!-- <div class="w-1/3 relative hidden xl:block">
           <div class="border rounded-lg p-3 flex items-center w-full">
             <span class="p-1"
               ><font-awesome
@@ -116,10 +116,10 @@
               ></div>
             </a>
           </div>
-        </div>
+        </div> -->
         <nav class="flex items-center hidden xl:block">
-          <g-link class="text-text-secondary" to="/">Home</g-link>
-          <g-link class="text-text-secondary ml-12" to="/about/"
+          <!-- <g-link class="text-text-secondary" to="/">Home</g-link> -->
+          <!-- <g-link class="text-text-secondary ml-12" to="/about/"
             >About Us</g-link
           >
           <g-link class="text-text-secondary ml-12" to="/search/"
@@ -127,7 +127,7 @@
           >
           <g-link class="text-text-secondary ml-12" to="/search/"
             >Contact Us</g-link
-          >
+          > -->
           <button
             class="text-white bg-green-primary rounded py-4 px-7 ml-12"
             @click="showDialog = true"
