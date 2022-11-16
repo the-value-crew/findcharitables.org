@@ -1,12 +1,12 @@
 @layer utilities {
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Georgia Regular';
     font-style: normal;
     font-weight: normal;
@@ -18,21 +18,23 @@
   font-style: normal;
   font-weight: normal;
   src: local('Georgia Regular'), url('../assets/fonts/SourceSansPro-Regular.woff') format('woff');
-}
+} */
 
 @font-face {
-    font-family: 'Gilroy Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Gilroy'), url('../assets/fonts/gilroy-bold.woff') format('woff');
+  font-family: "Gilroy Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gilroy"), url("../assets/fonts/gilroy-bold.woff") format("woff");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
 body {
-  font-family: 'Georgia Regular';
-  margin:0;
-  padding:0;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 .heading {
-  font-family: 'Gilroy Regular';
+  font-family: "Gilroy Regular";
 }

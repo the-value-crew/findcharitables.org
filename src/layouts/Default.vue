@@ -1,5 +1,5 @@
 <template>
-  <div class="layout xl:bg-backgroud min-h-screen">
+  <div class="xl:bg-backgroud min-h-screen">
     <div
       v-show="showDialog"
       @click.self="showDialog = false"
@@ -15,40 +15,31 @@
         place-items-center
       "
     >
-      <div class="w-1/2 max-w-xl py-8 bg-white rounded z-50">
-        <div class="container">
-          <div class="flex justify-between">
-            <h1 class="text-2xl mb-8">Initial data collection</h1>
+      <div class="mx-4 p-4 xl:w-1/2 xl:max-w-xl xl:p-8 bg-white rounded z-50">
+        <div class="flex justify-between items-center">
+          <h1 class="text-3xl font-bold">Initial data collection</h1>
 
-            <font-awesome
-              :icon="['fa', 'times-circle']"
-              class="cursor-pointer"
-              @click="showDialog = false"
-            />
-          </div>
+          <font-awesome
+            :icon="['fa', 'times-circle']"
+            class="cursor-pointer"
+            @click="showDialog = false"
+          />
+        </div>
 
-          <p class="mb-8">
-            We are collecting data for initial phase. If you are a suitale
-            organization to fit our list, or you know someone who may be a fit,
-            please fill up the form and become a part of us.
-          </p>
+        <p class="my-8">
+          We are collecting data for initial phase. If you are a suitale
+          organization to fit our list, or you know someone who may be a fit,
+          please fill up the form and become a part of us.
+        </p>
 
-          <div class="flex justify-center">
-            <a
-              href="https://forms.gle/H2kesvxmwGrXePpJ8"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="
-                bg-green-primary
-                text-white
-                rounded-md
-                px-7.5
-                py-4.5
-                mx-auto
-              "
-              >Fill up the form</a
-            >
-          </div>
+        <div class="flex justify-center">
+          <a
+            href="https://forms.gle/H2kesvxmwGrXePpJ8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary text-white rounded px-7.5 py-3 mx-auto"
+            >Fill up the form</a
+          >
         </div>
       </div>
     </div>
@@ -74,7 +65,7 @@
             />
           </g-link>
         </strong>
-        <!-- <div class="w-1/3 relative hidden xl:block">
+        <div class="w-1/3 relative hidden xl:block">
           <div class="border rounded-lg p-3 flex items-center w-full">
             <span class="p-1"
               ><font-awesome
@@ -116,20 +107,16 @@
               ></div>
             </a>
           </div>
-        </div> -->
-        <nav class="flex items-center hidden xl:block">
-          <!-- <g-link class="text-text-secondary" to="/">Home</g-link> -->
-          <!-- <g-link class="text-text-secondary ml-12" to="/about/"
-            >About Us</g-link
-          >
+        </div>
+        <nav class="md:flex items-center hidden xl:block">
+          <g-link class="text-text-secondary" to="/">Home</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/"
             >Charities</g-link
           >
-          <g-link class="text-text-secondary ml-12" to="/search/"
-            >Contact Us</g-link
-          > -->
+          <g-link class="text-text-secondary ml-12" to="/about/">About</g-link>
+
           <button
-            class="text-white bg-green-primary rounded py-4 px-7 ml-12"
+            class="btn-primary text-white rounded-lg py-4 px-7 ml-12"
             @click="showDialog = true"
           >
             Get listed
@@ -163,7 +150,10 @@
               class="h-16 w-auto"
             />
             <p class="text-xs text-center">
-              &copy; <span class="pl-1">The value crew 2022</span>
+              &copy;
+              <span class="pl-1"
+                >The value crew {{ new Date().getFullYear() }}</span
+              >
             </p>
           </div>
           <div id="social-media">
@@ -190,7 +180,10 @@
       </div>
       <div class="flex justify-between items-center px-4 xl:hidden">
         <p class="text-xs text-center">
-          &copy; <span class="pl-1">The value crew 2022</span>
+          &copy;
+          <span class="pl-1"
+            >The value crew {{ new Date().getFullYear() }}</span
+          >
         </p>
         <g-image
           src="~/assets/images/findcharitables.png"

@@ -9,4 +9,24 @@
     @apply w-full m-0;
 }
 
+.btn-primary {
+    @apply bg-green-primary bg-opacity-90 hover:bg-opacity-100 transition-all;
+}
+
+.btn-primary-light {
+    @apply border border-green-primary
+    text-green-primary
+    bg-white
+    rounded 
+    hover:bg-green-default-100  transition-all;
+}
+
+.app-link {
+    @apply text-green-primary italic underline;
+}
+
+a.active--exact {
+    @apply text-green-primary;
+}
+
 @tailwind utilities;

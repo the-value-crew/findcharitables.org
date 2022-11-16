@@ -1,0 +1,127 @@
+<template>
+  <div class="flex flex-col xl:flex-row justify-evenly">
+    <!-- search -->
+    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+      <div
+        class="
+          bg-white
+          border-4
+          rounded-full
+          border-green-primary
+          w-36
+          h-36
+          grid
+          place-items-center
+          self-center
+        "
+      >
+        <g-image
+          src="~/assets/images/charity_process/search.png"
+          class="h-1/2 w-auto"
+        />
+      </div>
+      <p
+        class="
+          heading
+          text-2xl
+          font-semibold
+          text-green-primary text-center
+          my-4
+        "
+      >
+        Search
+      </p>
+      <p class="text-text-secondary text-justify text-lg">
+        Head on to the organization page and choose the type of charity you want
+        to donate to (an orphanage, old-age home, schools etc.). You can also
+        <g-link to="/search" class="app-link">search</g-link>
+        for the organizations.
+      </p>
+    </div>
+
+    <!-- search -->
+    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+      <div
+        class="
+          bg-white
+          border-4
+          rounded-full
+          border-green-primary
+          w-36
+          h-36
+          grid
+          place-items-center
+          self-center
+        "
+      >
+        <g-image
+          src="~/assets/images/charity_process/select.png"
+          class="h-1/2 w-auto"
+        />
+      </div>
+      <p
+        class="
+          heading
+          text-2xl
+          font-semibold
+          text-green-primary text-center
+          my-4
+        "
+      >
+        Select
+      </p>
+      <p class="text-text-secondary text-justify text-lg">
+        Select the perfect organization that aligns with your values Go through
+        their details to scale their credibility. We even recommend contacting
+        them and inquire how your charity is being used.
+      </p>
+    </div>
+
+    <!-- donate -->
+    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+      <div
+        class="
+          bg-white
+          border-4
+          rounded-full
+          border-green-primary
+          w-36
+          h-36
+          grid
+          place-items-center
+          self-center
+        "
+      >
+        <g-image
+          src="~/assets/images/charity_process/donate.png"
+          class="h-1/2 w-auto"
+        />
+      </div>
+      <p
+        class="
+          heading
+          text-2xl
+          font-semibold
+          text-green-primary text-center
+          my-4
+        "
+      >
+        Donate
+      </p>
+      <p class="text-text-secondary text-justify text-lg">
+        We are just the bridge between you and the charitables. You need to
+        donate directly to the organization. You can donate in form of :money,
+        goods or service.
+      </p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "CharityProcess",
+};
+</script>
+
+<style>
+</style>

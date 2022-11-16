@@ -1,21 +1,25 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--charity-page-template-vue" */ "/Users/mac/Projects/csr/src/templates/CharityPageTemplate.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--search-vue" */ "/Users/mac/Projects/csr/src/pages/Search.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/mac/Projects/csr/src/pages/About.vue")
-const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/mac/Projects/csr/node_modules/gridsome/app/pages/404.vue")
-const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/mac/Projects/csr/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--pages--search-vue" */ "/Users/mac/Projects/findcharitables.org/src/pages/Search.vue")
+const c2 = () => import(/* webpackChunkName: "page--src--templates--charity-page-template-vue" */ "/Users/mac/Projects/findcharitables.org/src/templates/CharityPageTemplate.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/mac/Projects/findcharitables.org/src/pages/About.vue")
+const c4 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/mac/Projects/findcharitables.org/node_modules/gridsome/app/pages/404.vue")
+const c5 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/mac/Projects/findcharitables.org/src/pages/Index.vue")
 
 export default [
   {
-    path: "/save-the-children/",
+    path: "/search/",
     component: c1
   },
   {
-    path: "/search/",
+    path: "/pranavananda-ashram/",
     component: c2
   },
   {
-    path: "/chimalaya-charity-foundation/",
-    component: c1
+    path: "/disabled-rehabilitation-center/",
+    component: c2
+  },
+  {
+    path: "/divine-service-home/",
+    component: c2
   },
   {
     path: "/about/",
