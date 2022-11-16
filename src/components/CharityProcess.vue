@@ -8,8 +8,7 @@
           border-4
           rounded-full
           border-green-primary
-          w-36
-          h-36
+          w-24 h-24 xl:w-36 xl:h-36
           grid
           place-items-center
           self-center
@@ -47,8 +46,7 @@
           border-4
           rounded-full
           border-green-primary
-          w-36
-          h-36
+          w-24 h-24 xl:w-36 xl:h-36
           grid
           place-items-center
           self-center
@@ -85,8 +83,7 @@
           border-4
           rounded-full
           border-green-primary
-          w-36
-          h-36
+          w-24 h-24 xl:w-36 xl:h-36
           grid
           place-items-center
           self-center

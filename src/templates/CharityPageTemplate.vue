@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    name: "Charity Page Template",
+    name: "CharityPageTemplate",
     metaInfo() {
         return {
             title: this.$context.name,

@@ -1,5 +1,6 @@
 <template>
-  <div class="xl:bg-backgroud min-h-screen">
+  <div class="xl:bg-backgroud min-h-screen relative">
+    <!-- Initial data collection form -->
     <div
       v-show="showDialog"
       @click.self="showDialog = false"
@@ -44,71 +45,34 @@
       </div>
     </div>
 
-    <div id="nav" class="bg-white z-top relative">
+    <!-- navbar -->
+    <div
+      class="bg-white z-top shadow-md fixed w-full xl:relative xl:shadow-none"
+    >
       <header
-        class="
-          container
-          xl:flex
-          items-center
-          xl:justify-between
-          h-25
-          pt-4
-          xl:pt-0
-        "
+        class="container flex items-center justify-between xl:h-24 py-3 xl:py-0"
       >
-        <strong>
-          <g-link to="/">
-            <g-image
-              alt="The Value Crew"
-              src="~/assets/images/findcharitables.png"
-              class="h-16 w-auto"
-            />
-          </g-link>
-        </strong>
-        <div class="w-1/3 relative hidden xl:block">
-          <div class="border rounded-lg p-3 flex items-center w-full">
-            <span class="p-1"
-              ><font-awesome
-                :icon="['fa', 'search']"
-                class="text-text-secondary"
-            /></span>
-            <input
-              type="search"
-              name="search"
-              placeholder="Search"
-              class="focus:outline-none w-full p-1"
-              v-on:input="search"
-            />
-          </div>
-          <div
-            id="search-dropdown"
-            class="bg-white absolute w-full py-4 px-2 rounded-b-lg hidden"
-          >
-            <a
-              class="
-                flex
-                items-center
-                px-4
-                py-2
-                hover:bg-backgroud
-                cursor-pointer
-                border-b
-              "
-              :href="'/' + result.slug"
-              v-for="result in searchResult"
-              :key="result.slug"
-            >
-              <div id="logo">
-                <g-image :src="result.logo" class="w-12 h-12 rounded-full" />
-              </div>
-              <div
-                class="ml-4"
-                v-html="result['_highlightResult'].name.value"
-              ></div>
-            </a>
-          </div>
+        <!-- nav logo -->
+        <g-link to="/">
+          <g-image
+            alt="The Value Crew"
+            src="~/assets/images/findcharitables.png"
+            class="h-16 w-auto hidden xl:block"
+          />
+          <g-image
+            alt="The Value Crew"
+            src="~/assets/images/logo-sm.png"
+            class="h-12 w-auto xl:hidden"
+          />
+        </g-link>
+
+        <!-- Desktop search -->
+        <div class="hidden xl:block xl:w-1/3">
+          <SearchInput />
         </div>
-        <nav class="md:flex items-center hidden xl:block">
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center">
           <g-link class="text-text-secondary" to="/">Home</g-link>
           <g-link class="text-text-secondary ml-12" to="/search/"
             >Charities</g-link
@@ -122,10 +86,28 @@
             <span class="animate-pulse"> Get listed </span>
           </button>
         </nav>
+
+        <!-- mobile search -->
+        <div class="xl:hidden flex-grow mx-4">
+          <SearchInput />
+        </div>
+
+        <!-- mobile nav toggle -->
+        <button class="xl:hidden" @click="mobileNav = true">
+          <font-awesome
+            :icon="['fa', 'bars']"
+            class="text-text-secondary text-2xl"
+          />
+        </button>
       </header>
     </div>
-    <slot />
 
+    <!-- route content goes here -->
+    <div class="pt-24">
+      <slot />
+    </div>
+
+    <!-- footer -->
     <div id="footer" class="mt-7 bg-white xl:py-25">
       <!-- Desktop -->
       <div class="hidden xl:block container">
@@ -200,42 +182,79 @@
         />
       </div>
     </div>
+
+    <div
+      class="
+        fixed
+        top-0
+        left-0
+        z-top
+        h-screen
+        w-screen
+        bg-gray-100 bg-opacity-90
+        grid
+        items-center
+      "
+      v-show="mobileNav"
+    >
+      <div class="flex flex-col justify-center">
+        <button class="mb-16">
+          <font-awesome
+            :icon="['fa', 'times']"
+            class="text-text-secondary text-5xl"
+            @click="mobileNav = false"
+          />
+        </button>
+
+        <div class="flex flex-col text-xl items-center font-semibold">
+          <g-link
+            class="text-text-secondary my-4"
+            to="/"
+            @click="mobileNav = false"
+            >Home</g-link
+          >
+          <g-link
+            class="text-text-secondary my-4"
+            to="/search/"
+            @click="mobileNav = false"
+            >Charities</g-link
+          >
+          <g-link
+            class="text-text-secondary my-4"
+            to="/about/"
+            @click="mobileNav = false"
+            >About</g-link
+          >
+
+          <a
+            href="https://forms.gle/H2kesvxmwGrXePpJ8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-text-secondary mt-16"
+            @click="mobileNav = false"
+          >
+            Get listed
+            <font-awesome :icon="['fa', 'external-link']" />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import algoliasearch from "algoliasearch";
+import SearchInput from "../components/SearchInput.vue";
+
 export default {
+  name: "defaultLayout",
+  components: { SearchInput },
   data() {
     return {
-      searchResult: [],
       showDialog: false,
+      mobileNav: false,
     };
   },
-  methods: {
-    search(e) {
-      this.searchResult = [];
-      const client = algoliasearch(
-        "IXZ8C9YQFK",
-        "179bfd07cb33f063b95025dc745a9648"
-      );
-      const index = client.initIndex("tvc-csr");
-      const query = e.target.value;
-
-      index.search(query).then(({ hits }) => {
-        var dropdown = document.getElementById("search-dropdown");
-        if (hits.length != 0) {
-          dropdown.classList.remove("hidden");
-        } else {
-          dropdown.classList.add("hidden");
-        }
-        hits.forEach((element) => {
-          console.log(element);
-          this.searchResult.push(element);
-        });
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 

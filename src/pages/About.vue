@@ -11,7 +11,7 @@
       </div>
       <div class="xl:absolute w-full px-4 xl:px-0 inset-0 py-10">
         <div class="flex mt-14 items-center">
-          <div class="xl:w-2/5 pt-15 xl:pl-1/10">
+          <div class="xl:w-2/5 xl:pt-15 xl:pl-1/10">
             <p class="heading font-vold text-54px text-center xl:text-left">
               Who are we?
             </p>
@@ -33,7 +33,7 @@
           </div>
           <div class="hidden xl:block w-3/5 pl-16">
             <g-image
-              src="~/assets/images/who-are-we.png"
+              src="~/assets/images/who-are-we.jpg"
               class="w-full h-auto rounded-150px"
             />
           </div>
@@ -118,7 +118,9 @@
           </p>
           <p class="text-xl">
             We are a group of people with varied skillset but common mindset of
-            contributing to society. We are the members of TheValueCrew.
+            contributing to society. We are the members of
+            <a href="http://thevaluecrew.com" target="_blank" rel="noopener noreferrer" class="app-link">The Value Crew</a>
+            .
           </p>
           <p class="mt-8 text-xl">
             The Value Crew is a tech company from Kathmandu, Nepal established

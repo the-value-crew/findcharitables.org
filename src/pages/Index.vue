@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <!-- hero -->
     <div class="p-4 xl:p-0">
       <div
         class="
@@ -27,40 +28,6 @@
           >
             -Mother Teresa
           </p>
-
-          <!-- search -->
-          <div
-            class="
-              rounded-lg
-              border
-              w-3/4
-              mt-16
-              bg-white
-              items-center
-              justify-between
-              hidden
-              md:flex
-              xl:inline-flex
-            "
-          >
-            <div class="flex-grow flex items-center">
-              <div class="pl-4 pr-2">
-                <font-awesome
-                  :icon="['fa', 'search']"
-                  class="text-text-secondary text-lg"
-                />
-              </div>
-              <input
-                type="text"
-                name="search"
-                class="focus:outline-none px-2 text-lg flex-grow"
-                placeholder="Charity name or type"
-              />
-            </div>
-            <button class="btn-primary p-4 rounded-r-lg text-white">
-              Donate now
-            </button>
-          </div>
         </div>
         <div
           class="
@@ -157,7 +124,7 @@
         <g-image src="~/assets/images/2-circle.png" class="float-right" />
       </div>
       <div class="xl:flex xl:justify-between xl:items-top">
-        <div class="xl:w-2/5 w-full">
+        <div class="xl:w-2/5 w-full mb-16 xl:mb-0">
           <p class="heading font-bold text-28px xl:text-54px">FAQs</p>
           <p class="text-text-primary my-8 text-lg">
             Everything you need to know about our endeavour. Can't find the
@@ -168,9 +135,13 @@
               btn-primary
               text-white
               rounded-lg
-              py-4.5
+              xl:py-4.5
+              py-3
               px-7.5
+              block
+              xl:inline
               w-full
+              text-center
               xl:w-auto
             "
             href="mailto:thevaluecrew@gmail.com"

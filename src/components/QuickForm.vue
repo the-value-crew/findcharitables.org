@@ -55,8 +55,12 @@
         text-white
         rounded-lg
         px-7.5
-        py-4.5
+        xl:py-4.5
+        py-3
+        block
         w-full
+        text-center
+        xl:inline
         xl:w-auto
       "
       target="_blank"
