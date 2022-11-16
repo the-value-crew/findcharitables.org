@@ -182,18 +182,35 @@
 
       <p class="text-lg mt-4">
         <span class="font-bold">Technical</span>
-        : The code for this project is Open Source at Github. Feel free to
-        improve codebase and submit a PR.
+        : The code for this project is Open Source at
+        <a
+          href="https://github.com/the-value-crew/findcharitables.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="app-link"
+          >Github</a
+        >
+        . Feel free to improve codebase and submit a PR.
       </p>
       <p class="text-lg mt-4">
         <span class="font-bold">Financial</span>
         : This projects requires a domain and a server to run. We are paying the
         cost annually. You can support us by paying the bills. Moreover, to
-        motivate the team, you can buy them a cup of coffee.
+        motivate the team, you can
+        <a
+          href="https://www.buymeacoffee.com/findcharitable"
+          class="app-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >buy them a coffee.</a
+        >
       </p>
 
       <p class="text-lg mt-4">
-        If you want to contribute in any other way, please <a href="mailto:thevaluecrew@gmail.com" class="app-link">send us an email.</a>
+        If you want to contribute in any other way, please
+        <a href="mailto:thevaluecrew@gmail.com" class="app-link"
+          >send us an email.</a
+        >
       </p>
     </div>
   </Layout>

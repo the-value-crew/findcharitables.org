@@ -41,8 +41,8 @@
           overflow-hidden
         "
         :class="{ 'h-auto mt-4': activeIndexes.includes(index) }"
+        v-html="faq.a"
       >
-        {{ faq.a }}
       </p>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default {
       faqs: [
         {
           q: "Who am I donating to?",
-          a: "You are directly donating to the organization of your choice. We do not keep anything for ourselves and are not a middleman. However, if you like the platform, consider donating to us. We have many ideas to improve the platform. Your support will help us to bring these ideas to life.",
+          a: "You are donating directly to the organization of your choice. We do not keep anything for ourselves as we are not a middleman. However, if you like the platform, consider <a href='https://www.buymeacoffee.com/findcharitable' target='_blank' class='app-link'> buying us a coffee</a>. We have many ideas to improve the platform. Your support will help us to bring these ideas to life.",
         },
         {
           q: "How do I know my donations are making an impact?",
@@ -64,7 +64,7 @@ export default {
         },
         {
           q: "I cannot find the charity I am searching for!",
-          a: "We are continuously looking to add organizations to our database. If you know one help to instill the culture of giving by adding the organization to our platform here.",
+          a: "Sorry for the trouble. We are continuously looking to add more organizations to the list. If you have such charitables in mind, please help to instill the culture of giving by adding the it to our platform <a href='https://forms.gle/H2kesvxmwGrXePpJ8' target='_blank' class='app-link'> here </a>.",
         },
         {
           q: "What can I donate?",

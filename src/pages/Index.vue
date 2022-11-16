@@ -151,6 +151,7 @@
     <!-- FAQs -->
     <div
       class="mt-7 mx-auto w-11/12 bg-white xl:py-25 py-6 xl:px-30 rounded-lg"
+      id="faqs"
     >
       <div class="xl:hidden container h-14">
         <g-image src="~/assets/images/2-circle.png" class="float-right" />
@@ -158,7 +159,7 @@
       <div class="xl:flex xl:justify-between xl:items-top">
         <div class="xl:w-2/5 w-full">
           <p class="heading font-bold text-28px xl:text-54px">FAQs</p>
-          <p class="text-text-primary my-8">
+          <p class="text-text-primary my-8 text-lg">
             Everything you need to know about our endeavour. Can't find the
             answer you're looking for? Please send us your queries!
           </p>

@@ -119,31 +119,17 @@
             class="btn-primary text-white rounded-lg py-4 px-7 ml-12"
             @click="showDialog = true"
           >
-            Get listed
+            <span class="animate-pulse"> Get listed </span>
           </button>
         </nav>
       </header>
     </div>
     <slot />
+
     <div id="footer" class="mt-7 bg-white xl:py-25">
-      <div class="container hidden xl:block">
+      <!-- Desktop -->
+      <div class="hidden xl:block container">
         <div class="flex justify-between">
-          <div id="quick-link">
-            <p class="uppercase">quick link</p>
-            <ol class="mt-5">
-              <li><a href="#">Search</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Sign up</a></li>
-            </ol>
-          </div>
-          <div id="support">
-            <p class="uppercase">support</p>
-            <ol class="mt-5">
-              <li><a href="#">Privacy policy</a></li>
-              <li><a href="#">Legal page</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ol>
-          </div>
           <div id="logo">
             <g-image
               src="~/assets/images/findcharitables.png"
@@ -156,28 +142,51 @@
               >
             </p>
           </div>
+
+          <div id="quick-link">
+            <p class="uppercase">quick link</p>
+            <ol class="mt-5">
+              <li>
+                <g-link to="/">Home</g-link>
+              </li>
+              <li>
+                <g-link to="/search">Search</g-link>
+              </li>
+              <li>
+                <g-link to="/about">About</g-link>
+              </li>
+            </ol>
+          </div>
+
+          <div id="support">
+            <p class="uppercase">support</p>
+            <ol class="mt-5">
+              <li>
+                <g-link to="/privacy-policy">Privacy policy</g-link>
+              </li>
+              <li>
+                <g-link to="/#faqs">FAQs</g-link>
+              </li>
+              <li>
+                <g-link to="/about#contribute">Contribute</g-link>
+              </li>
+            </ol>
+          </div>
+
           <div id="social-media">
-            <a href="#"
-              ><font-awesome
-                :icon="['fab', 'facebook-square']"
-                class="text-facebook px-3.5"
-                size="2xl"
-            /></a>
-            <a href="#"
-              ><font-awesome
-                :icon="['fab', 'twitter-square']"
-                class="text-twitter px-3.5"
-                size="2xl"
-            /></a>
-            <a href="#"
-              ><font-awesome
-                :icon="['fab', 'youtube-square']"
-                class="text-youtube px-3.5"
-                size="2xl"
+            <a
+              href="https://www.buymeacoffee.com/findcharitable"
+              target="_blank"
+              ><img
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png"
+                alt="Buy Me A Coffee"
+                style="height: 60px !important; width: 217px !important"
             /></a>
           </div>
         </div>
       </div>
+
+      <!-- Mobile -->
       <div class="flex justify-between items-center px-4 xl:hidden">
         <p class="text-xs text-center">
           &copy;
@@ -200,7 +209,7 @@ export default {
   data() {
     return {
       searchResult: [],
-      showDialog: true,
+      showDialog: false,
     };
   },
   methods: {
