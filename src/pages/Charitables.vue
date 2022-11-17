@@ -57,7 +57,8 @@
               <g-image
                 :alt="charity.name + ' cover'"
                 :src="charity.featured_media_large"
-                class="w-full h-52 rounded-t-lg"
+                class="w-full h-36 xl:h-52 rounded-t-lg"
+                :quality="100"
               />
 
               <!-- profile image -->
@@ -67,7 +68,8 @@
                   w-20
                   bg-white
                   rounded-full
-                  mx-4
+                  mx-auto
+                  xl:mx-4
                   transform
                   -translate-y-1/2
                 "
@@ -75,8 +77,8 @@
                 <g-image
                   :alt="charity.name + ' logo'"
                   :src="charity.logo"
-                  :fit="'cover'"
                   class="h-20 w-20 rounded-full"
+                  :quality="100"
                 />
               </div>
 
@@ -87,14 +89,16 @@
                     overflow-hidden
                     text-ellipsis
                     font-semibold
-                    text-28px text-text-primary
+                    block mb-4
+                    text-2xl text-center
+                    xl:text-left
+                    xl:text-28px text-text-primary
                   "
                   >{{ charity.name }}</a
                 >
 
                 <p
                   class="
-                    hidden
                     text-justify
                     mb-4
                     xl:block
@@ -129,6 +133,8 @@
               </div>
             </div>
           </div>
+
+          <!-- No match found -->
           <div
             v-show="!filteredCharities.length"
             class="w-full text-center my-16"

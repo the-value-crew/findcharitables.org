@@ -3,13 +3,30 @@
     <g-image
       :alt="$context.name + ' cover'"
       :src="$context.featured_media_large"
+      :quality="100"
       class="w-full h-132.25"
     />
 
     <div class="w-full bg-white py-4">
-      <div class="container flex flex-wrap justify-center xl:justify-between items-start">
+      <div
+        class="
+          container
+          flex flex-wrap
+          justify-center
+          xl:justify-between
+          items-start
+        "
+      >
         <!-- logo+ title -->
-        <div class="flex flex-wrap justify-center xl:justify-start items-start mt-4">
+        <div
+          class="
+            flex flex-wrap
+            justify-center
+            xl:justify-start
+            items-start
+            mt-4
+          "
+        >
           <div
             class="
               rounded-full
@@ -25,9 +42,25 @@
               :alt="$context.name + ' logo'"
               :src="$context.logo"
               class="h-36 w-36 rounded-full"
+              :quality="100"
             />
           </div>
-          <h1 class="font-semibold text-4xl -mt-10 md:mt-0 xl:mt-0 xl:text-6xl xl:pl-8 text-text-primary">{{ $context.name }}</h1>
+          <h1
+            class="
+              font-semibold
+              text-3xl
+              text-center
+              xl:text-left
+              mb-8
+              xl:mb-0
+              -mt-10
+              md:mt-0
+              xl:mt-0 xl:text-6xl xl:pl-8
+              text-text-primary
+            "
+          >
+            {{ $context.name }}
+          </h1>
         </div>
 
         <button
@@ -39,6 +72,8 @@
             mt-2
             py-4
             px-7
+            w-full
+            xl:w-auto
           "
         >
           <font-awesome
