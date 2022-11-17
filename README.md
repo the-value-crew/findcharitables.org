@@ -23,3 +23,6 @@ If you want to contribute in any other way, please send us an email at thevaluec
 4. `npm install` to install dependencies
 5. `gridsome develop` to start a local dev server at `http://localhost:8080`
 6. Happy coding 🎉🙌
+
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)]([https://www.buymeacoffee.com/gbraad](https://www.buymeacoffee.com/findcharitable))
