@@ -28,5 +28,4 @@
 a.active--exact {
     @apply text-green-primary;
 }
-
 @tailwind utilities;

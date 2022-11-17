@@ -74,16 +74,55 @@
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center">
           <g-link class="text-text-secondary" to="/">Home</g-link>
-          <g-link class="text-text-secondary ml-12" to="/search/"
-            >Charities</g-link
-          >
+          <g-link class="text-text-secondary ml-12" to="/charitables/">
+            Charitables
+          </g-link>
           <g-link class="text-text-secondary ml-12" to="/about/">About</g-link>
 
           <button
-            class="btn-primary text-white rounded-lg py-4 px-7 ml-12"
+            class="
+              btn-primary
+              text-white
+              rounded-lg
+              py-4
+              px-7
+              ml-12
+              flex
+              items-center
+            "
             @click="showDialog = true"
           >
-            <span class="animate-pulse"> Get listed </span>
+            <span
+              class="
+                rounded-full
+                w-5
+                h-5
+                bg-white
+                mr-2
+                grid
+                place-items-center
+                relative
+              "
+            >
+              <div
+                class="
+                  absolute
+                  w-5
+                  h-5
+                  -z-10
+                  rounded-full
+                  bg-green-secondary
+                  animate-ping
+                "
+              ></div>
+
+              <font-awesome
+                :icon="['fa', 'check-circle']"
+                class="text-green-primary w-4 h-4 z-top"
+              />
+            </span>
+
+            Get listed
           </button>
         </nav>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col xl:flex-row justify-evenly">
+  <div class="flex flex-col xl:flex-row xl:justify-evenly">
     <!-- search -->
     <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
       <div
@@ -8,7 +8,9 @@
           border-4
           rounded-full
           border-green-primary
-          w-24 h-24 xl:w-36 xl:h-36
+          w-24
+          h-24
+          xl:w-36 xl:h-36
           grid
           place-items-center
           self-center
@@ -31,14 +33,14 @@
         Search
       </p>
       <p class="text-text-secondary text-justify text-lg">
-        Head on to the organization page and choose the type of charity you want
-        to donate to (an orphanage, old-age home, schools etc.). You can also
-        <g-link to="/search" class="app-link">search</g-link>
-        for the organizations.
+        Head on to
+        <g-link to="/charitables" class="app-link">charitables</g-link>
+        list and choose the type of organization you want to donate to i.e. an orphanage,
+        old-age home, schools etc.
       </p>
     </div>
 
-    <!-- search -->
+    <!-- select -->
     <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
       <div
         class="
@@ -46,7 +48,9 @@
           border-4
           rounded-full
           border-green-primary
-          w-24 h-24 xl:w-36 xl:h-36
+          w-24
+          h-24
+          xl:w-36 xl:h-36
           grid
           place-items-center
           self-center
@@ -69,9 +73,9 @@
         Select
       </p>
       <p class="text-text-secondary text-justify text-lg">
-        Select the perfect organization that aligns with your values Go through
-        their details to scale their credibility. We even recommend contacting
-        them and inquire how your charity is being used.
+        Select organization that aligns with your values by going through
+        their details to scale the credibility. We recommend contacting
+        them to inquire how your aid will be used.
       </p>
     </div>
 
@@ -83,7 +87,9 @@
           border-4
           rounded-full
           border-green-primary
-          w-24 h-24 xl:w-36 xl:h-36
+          w-24
+          h-24
+          xl:w-36 xl:h-36
           grid
           place-items-center
           self-center
@@ -107,8 +113,8 @@
       </p>
       <p class="text-text-secondary text-justify text-lg">
         We are just the bridge between you and the charitables. You need to
-        donate directly to the organization. You can donate in form of :money,
-        goods or service.
+        donate directly to the organization. You can donate in form of money,
+        goods or service as per their needs.
       </p>
     </div>
   </div>

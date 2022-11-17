@@ -42,7 +42,17 @@
     </div>
 
     <!-- Our team -->
-    <div class="container mt-16 xl:mt-24 bg-white z-50 relative rounded-lg">
+    <div
+      class="
+        container
+        mt-16
+        xl:mt-24 xl:py-24
+        bg-white
+        z-50
+        relative
+        rounded-lg
+      "
+    >
       <p class="uppercase font-bold text-54px text-center">OUR TEAM</p>
       <div
         class="
@@ -119,7 +129,13 @@
           <p class="text-xl">
             We are a group of people with varied skillset but common mindset of
             contributing to society. We are the members of
-            <a href="http://thevaluecrew.com" target="_blank" rel="noopener noreferrer" class="app-link">The Value Crew</a>
+            <a
+              href="http://thevaluecrew.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-link"
+              >The Value Crew</a
+            >
             .
           </p>
           <p class="mt-8 text-xl">
@@ -157,63 +173,65 @@
     </div>
 
     <!-- Contribute -->
-    <div class="container mt-8" id="contribute">
-      <p
-        class="
-          heading
-          text-54px
-          font-bold
-          mb-4
-          xl:mb-16
-          text-center
-          xl:text-left
-        "
-      >
-        Contribute
-      </p>
-
-      <p class="text-lg">
-        It's a CSR project from the members of The Value Crew. The company
-        handles the technical, managerial and financial aspects of the project.
-        However, we really appreciate your help to grow bigger.
-      </p>
-
-      <p class="text-lg mt-4">
-        These are some of the areas you can contribute to.
-      </p>
-
-      <p class="text-lg mt-4">
-        <span class="font-bold">Technical</span>
-        : The code for this project is Open Source at
-        <a
-          href="https://github.com/the-value-crew/findcharitables.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="app-link"
-          >Github</a
+    <div class="bg-white mt-7 py-16 xl:py-25">
+      <div class="container mt-8" id="contribute">
+        <p
+          class="
+            heading
+            text-54px
+            font-bold
+            mb-4
+            xl:mb-16
+            text-center
+            xl:text-left
+          "
         >
-        . Feel free to improve codebase and submit a PR.
-      </p>
-      <p class="text-lg mt-4">
-        <span class="font-bold">Financial</span>
-        : This projects requires a domain and a server to run. We are paying the
-        cost annually. You can support us by paying the bills. Moreover, to
-        motivate the team, you can
-        <a
-          href="https://www.buymeacoffee.com/findcharitable"
-          class="app-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          >buy them a coffee.</a
-        >
-      </p>
+          Contribute
+        </p>
 
-      <p class="text-lg mt-4">
-        If you want to contribute in any other way, please
-        <a href="mailto:thevaluecrew@gmail.com" class="app-link"
-          >send us an email.</a
-        >
-      </p>
+        <p class="text-lg">
+          It's a CSR project from the members of The Value Crew. The company
+          handles the technical, managerial and financial aspects of the
+          project. However, we really appreciate your help to grow bigger.
+        </p>
+
+        <p class="text-lg mt-4">
+          These are some of the areas you can contribute to.
+        </p>
+
+        <p class="text-lg mt-4">
+          <span class="font-bold">Technical</span>
+          : The code for this project is Open Source at
+          <a
+            href="https://github.com/the-value-crew/findcharitables.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="app-link"
+            >Github</a
+          >
+          . Feel free to improve codebase and submit a PR.
+        </p>
+        <p class="text-lg mt-4">
+          <span class="font-bold">Financial</span>
+          : This projects requires a domain and a server to run. We are paying
+          the cost annually. You can support us by paying the bills. Moreover,
+          to motivate the team, you can
+          <a
+            href="https://www.buymeacoffee.com/findcharitable"
+            class="app-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >buy them a coffee.</a
+          >
+        </p>
+
+        <p class="text-lg mt-4">
+          If you want to contribute in any other way, please
+          <a href="mailto:thevaluecrew@gmail.com" class="app-link"
+            >send us an email.</a
+          >
+        </p>
+      </div>
     </div>
   </Layout>
 </template>

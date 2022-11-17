@@ -1,10 +1,16 @@
 <template>
   <Layout>
-    <div class="container my-0 xl:my-16">
+    <div class="container">
       <div class="flex flex-col xl:flex-row">
-
         <!-- categories -->
-        <div class="flex flex-wrap xl:block xl:w-1/4 xl:p-4 mb-8 xl:mb-0">
+        <div
+          class="
+            flex flex-wrap
+            xl:block xl:w-1/4 xl:p-4
+            mb-8
+            xl:mb-0 xl:bg-white xl:rounded-lg xl:shadow
+          "
+        >
           <div
             class="
               flex
@@ -16,7 +22,9 @@
               rounded-lg
               bg-green-primary
               xl:bg-white
-              my-1
+              shadow
+              xl:shadow-none
+              my-2
               cursor-pointer
             "
             v-for="edge in $static.categories.edges"
@@ -33,42 +41,52 @@
           </div>
         </div>
 
-        <div class="w-full xl:w-3/4 xl:p-4 min-h-screen">
-          <p class="font-bold text-xl xl:text-54px heading">
-            23 child care related charities
-          </p>
-          <div class="my-4 grid grid-cols-1 xl:grid-cols-2 gap-4">
+        <div class="w-full xl:w-3/4 xl:ml-12 min-h-screen">
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
             <div
-              class="bg-white border xl:border-0 rounded-lg shadow p-5"
+              class="bg-white border xl:border-0 rounded-lg shadow max-w-md "
               v-for="edge in $static.charities.edges"
               :key="edge.node.id"
             >
+              <!-- cover image -->
               <g-image
                 :alt="edge.node.name + ' cover'"
                 :src="edge.node.featured_media_medium"
-                class="w-full h-50.75 rounded-lg"
+                class="w-full h-52 rounded-t-lg"
               />
-              <div class="flex items-center mt-7">
+
+              <!-- profile image -->
+              <div
+                class="
+                  h-20
+                  w-20
+                  bg-white
+                  rounded-full
+                  mx-4
+                  transform
+                  -translate-y-1/2
+                "
+              >
                 <g-image
                   :alt="edge.node.name + ' logo'"
                   :src="edge.node.logo"
                   :fit="'cover'"
-                  class="h-20 w-20 rounded-full mr-2 xl:mr-4"
+                  class="h-20 w-20 rounded-full"
                 />
+              </div>
 
-                <div
+              <div class="py-4 px-4 -mt-10">
+                <a
+                  :href="'/' + edge.node.slug"
                   class="
                     overflow-hidden
                     text-ellipsis
-                    font-bold
-                    text-28px
-                    heading
+                    font-semibold
+                    text-28px text-text-primary
                   "
+                  >{{ edge.node.name }}</a
                 >
-                  <a :href="'/' + edge.node.slug">{{ edge.node.name }}</a>
-                </div>
-              </div>
-              <div class="p-2 w-full">
+
                 <p
                   class="
                     hidden
@@ -90,19 +108,21 @@
                 <a
                   :href="'/' + edge.node.slug"
                   class="
-                    w-full
                     block
-                    text-center
-                    xl:w-auto
-                    bg-transparent
+                    btn-primary
+                    text-white
+                    w-full
+                    py-4
                     rounded
-                    border border-green-primary
-                    capitalize
-                    text-green-primary
-                    p-2
+                    text-center text:xl
                   "
-                  >donate</a
                 >
+                  <font-awesome
+                    :icon="['fa', 'hand-holding-heart']"
+                    class="text-white mr-2"
+                  />
+                  Donate
+                </a>
               </div>
             </div>
           </div>

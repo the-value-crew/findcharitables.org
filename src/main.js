@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 
-import { faPlusCircle, faSearch, faMinusCircle, faTimesCircle, faBars, faTimes, faExternalLink } from '@fortawesome/free-solid-svg-icons'
+import { faPlusCircle, faSearch, faMinusCircle, faTimesCircle, faBars, faTimes, faExternalLink, faListCheck, faCheckDouble, faCheckCircle, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
 
 config.autoAddCss = false;
@@ -22,7 +22,9 @@ library.add(
   faTimesCircle,
   faTimes,
   faExternalLink,
-  faBars
+  faBars,
+  faCheckCircle,
+  faHandHoldingHeart
 )
 
 export default function (Vue, { router, head, isClient }) {
