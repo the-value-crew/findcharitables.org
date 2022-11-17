@@ -3,7 +3,6 @@
     <!-- hero -->
     <div class="relative h-160 -mt-15">
       <div
-        id="background"
         class="hidden xl:flex justify-between items-end -z-50"
       >
         <div class="bg-green-secondary h-191 w-1/2 rounded-150px"></div>
@@ -12,8 +11,8 @@
       <div class="xl:absolute w-full px-4 xl:px-0 inset-0 py-10">
         <div class="flex mt-14 items-center">
           <div class="xl:w-2/5 xl:pt-15 xl:pl-1/10">
-            <p class="heading font-vold text-54px text-center xl:text-left">
-              Who are we?
+            <p class="heading font-bold text-5xl xl:text-54px text-center xl:text-left">
+              Why this project?
             </p>
             <p class="mt-7 text-xl text-justify xl:text-left">
               People want to donate but they don't know where or who to donate.
@@ -53,7 +52,7 @@
         rounded-lg
       "
     >
-      <p class="uppercase font-bold text-54px text-center">OUR TEAM</p>
+      <p class="uppercase font-bold text-5xl xl:text-54px text-center">OUR TEAM</p>
       <div
         class="
           flex flex-col
@@ -117,13 +116,13 @@
     </div>
 
     <!-- About us -->
-    <div class="bg-white mt-7 py-16 xl:py-25">
+    <div class="bg-white mt-6 py-16 xl:py-25">
       <div class="container flex">
         <div class="hidden xl:block w-1/2">
           <g-image src="~/assets/images/about_us.svg" class="h-auto w-full" />
         </div>
         <div class="xl:w-1/2 xl:pl-8 text-justify xl:text-left">
-          <p class="font-bold text-54px mb-8 heading text-center xl:text-left">
+          <p class="font-bold text-5xl xl:text-54px mb-8 heading text-center xl:text-left">
             About Us
           </p>
           <p class="text-xl">
@@ -153,12 +152,12 @@
     </div>
 
     <!-- How it works -->
-    <div class="bg-white mt-7 py-16 xl:py-25">
+    <div class="bg-white mt-6 pt-16 xl:py-25">
       <div class="container">
         <p
           class="
             heading
-            text-54px
+            text-5xl xl:text-54px
             font-bold
             mb-16
             xl:mb-24
@@ -173,15 +172,14 @@
     </div>
 
     <!-- Contribute -->
-    <div class="bg-white mt-7 py-16 xl:py-25">
-      <div class="container mt-8" id="contribute">
+    <div class="bg-white mt-6 py-16 xl:py-25">
+      <div class="container" id="contribute">
         <p
           class="
             heading
             text-54px
             font-bold
-            mb-4
-            xl:mb-16
+            mb-16
             text-center
             xl:text-left
           "

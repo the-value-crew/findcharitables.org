@@ -56,7 +56,7 @@ module.exports = function (api) {
       //collection for algolia searchable
       algolia.push({
         objectID: item.id,
-        name: item.name,
+        name: item.name.toLowerCase(),
         logo: item.logo,
         slug: item.slug,
         category: item.category

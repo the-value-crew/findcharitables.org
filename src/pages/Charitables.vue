@@ -26,7 +26,8 @@
               xl:shadow-none
               my-2
               cursor-pointer
-              transition
+              transition 
+              select-none
             "
             :class="{
               'bg-green-secondary xl:bg-green-secondary':
@@ -58,7 +59,7 @@
                 :alt="charity.name + ' cover'"
                 :src="charity.featured_media_large"
                 class="w-full h-36 xl:h-52 rounded-t-lg"
-                :quality="100"
+                :quality="'100'"
               />
 
               <!-- profile image -->
@@ -78,7 +79,7 @@
                   :alt="charity.name + ' logo'"
                   :src="charity.logo"
                   class="h-20 w-20 rounded-full"
-                  :quality="100"
+                  :quality="'100'"
                 />
               </div>
 

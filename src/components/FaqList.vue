@@ -5,12 +5,11 @@
       :key="index"
       class="my-4 py-4 px-4 rounded transition-all hover:bg-gray-100"
     >
-      <div
-        class="flex justify-between cursor-pointer"
-        @click="toggle(index)"
-      >
+      <div class="flex justify-between cursor-pointer" @click="toggle(index)">
         <!-- question -->
-        <p class="font-semibold text-text-primary text-lg flex-grow">
+        <p
+          class="font-semibold text-text-primary text-lg flex-grow select-none"
+        >
           {{ faq.q }}
         </p>
 
@@ -39,11 +38,11 @@
           ease-in-out
           h-0
           overflow-hidden
+          select-none
         "
         :class="{ 'h-auto mt-4': activeIndexes.includes(index) }"
         v-html="faq.a"
-      >
-      </p>
+      ></p>
     </div>
   </div>
 </template>

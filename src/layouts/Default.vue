@@ -18,7 +18,9 @@
     >
       <div class="mx-4 p-4 xl:w-1/2 xl:max-w-xl xl:p-8 bg-white rounded z-50">
         <div class="flex justify-between items-center">
-          <h1 class="text-3xl font-semibold text-text-primary">Initial data collection</h1>
+          <h1 class="text-3xl font-semibold text-text-primary">
+            Initial data collection
+          </h1>
 
           <font-awesome
             :icon="['fa', 'times-circle']"
@@ -50,19 +52,19 @@
       class="bg-white z-top shadow-md fixed w-full xl:relative xl:shadow-none"
     >
       <header
-        class="container flex items-center justify-between xl:h-24 py-3 xl:py-0"
+        class="container flex items-center justify-between xl:h-24 py-2 xl:py-0"
       >
         <!-- nav logo -->
         <g-link to="/">
           <g-image
             alt="The Value Crew"
             src="~/assets/images/findcharitables.png"
-            class="h-16 w-auto hidden xl:block"
+            class="h-16 w-auto hidden xl:block select-none"
           />
           <g-image
             alt="The Value Crew"
             src="~/assets/images/logo-sm.png"
-            class="h-12 w-auto xl:hidden"
+            class="h-10 w-10 xl:hidden select-none"
           />
         </g-link>
 
@@ -147,80 +149,7 @@
     </div>
 
     <!-- footer -->
-    <div id="footer" class="mt-7 bg-white xl:py-25">
-      <!-- Desktop -->
-      <div class="hidden xl:block container">
-        <div class="flex justify-between">
-          <div id="logo">
-            <g-image
-              src="~/assets/images/findcharitables.png"
-              class="h-16 w-auto"
-            />
-            <p class="text-xs text-center">
-              &copy;
-              <span class="pl-1"
-                >The value crew {{ new Date().getFullYear() }}</span
-              >
-            </p>
-          </div>
-
-          <div id="quick-link">
-            <p class="uppercase">quick link</p>
-            <ol class="mt-5">
-              <li>
-                <g-link to="/">Home</g-link>
-              </li>
-              <li>
-                <g-link to="/charitables">Search</g-link>
-              </li>
-              <li>
-                <g-link to="/about">About</g-link>
-              </li>
-            </ol>
-          </div>
-
-          <div id="support">
-            <p class="uppercase">support</p>
-            <ol class="mt-5">
-              <li>
-                <g-link to="/privacy-policy">Privacy policy</g-link>
-              </li>
-              <li>
-                <g-link to="/#faqs">FAQs</g-link>
-              </li>
-              <li>
-                <g-link to="/about#contribute">Contribute</g-link>
-              </li>
-            </ol>
-          </div>
-
-          <div id="social-media">
-            <a
-              href="https://www.buymeacoffee.com/findcharitable"
-              target="_blank"
-              ><img
-                src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png"
-                alt="Buy Me A Coffee"
-                style="height: 60px !important; width: 217px !important"
-            /></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile -->
-      <div class="flex justify-between items-center px-4 xl:hidden">
-        <p class="text-xs text-center">
-          &copy;
-          <span class="pl-1"
-            >The value crew {{ new Date().getFullYear() }}</span
-          >
-        </p>
-        <g-image
-          src="~/assets/images/findcharitables.png"
-          class="h-10 w-auto"
-        />
-      </div>
-    </div>
+    <HomeFooter />
 
     <div
       class="
@@ -230,7 +159,7 @@
         z-top
         h-screen
         w-screen
-        bg-gray-100 bg-opacity-90
+        bg-gray-100 bg-opacity-95
         grid
         items-center
       "
@@ -245,7 +174,7 @@
           />
         </button>
 
-        <div class="flex flex-col text-xl items-center font-semibold">
+        <div class="flex flex-col text-3xl items-center font-semibold">
           <g-link
             class="text-text-secondary my-4"
             to="/"
@@ -283,10 +212,11 @@
 
 <script>
 import SearchInput from "../components/SearchInput.vue";
+import HomeFooter from "../components/HomeFooter.vue";
 
 export default {
   name: "defaultLayout",
-  components: { SearchInput },
+  components: { SearchInput, HomeFooter },
   data() {
     return {
       showDialog: false,

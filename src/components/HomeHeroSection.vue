@@ -11,14 +11,14 @@
         <div
           class="
             xl:flex xl:justify-between
-            h-96
+            h-80
             xl:h-166
             overflow-hidden
             relative
           "
         >
           <div class="xl:w-1/2 bg-no-repeat xl:bg-rectangle xl:pl-1/10">
-            <p class="heading font-bold text-40px xl:text-54px mt-4 xl:mt-52">
+            <p class="heading font-bold text-4xl xl:text-6xl mt-4 xl:mt-52">
               “{{ quote.text }}”
             </p>
             <p
@@ -35,6 +35,7 @@
               -{{ quote.author }}
             </p>
           </div>
+
           <div
             class="
               xl:w-2/5
@@ -46,7 +47,7 @@
           >
             <g-image
               src="~/assets/images/circle.png"
-              class="absolute xl:hidden bottom-3 right-0"
+              class="absolute xl:hidden bottom-0 right-0 w-40 -z-1 xl:w-auto"
             />
             <g-image
               :src="
@@ -57,12 +58,13 @@
                 bottom-0
                 right-3
                 xl:static
-                w-45.5
+                w-36
+                -z-1
                 xl:rounded-lg
                 rounded-t-full rounded-br-full
                 xl:w-full
               "
-              alt="Mother Teresa"
+              :alt="quote.author"
             />
           </div>
         </div>
@@ -72,7 +74,6 @@
 </template>
 
 <script>
-
 export default {
   name: "HomeHeroSection",
   components: {
@@ -90,7 +91,7 @@ export default {
     return {
       quotes: [
         {
-          text: "Give what you have to give; it will come back to you, but do not think of that now.",
+          text: "Give what you have to give, it will come back to you, but do not think of that now.",
           author: "Swami Vivekananda",
           authorImg: "vivekananda.jpg",
         },

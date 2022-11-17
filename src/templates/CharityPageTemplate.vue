@@ -3,8 +3,8 @@
     <g-image
       :alt="$context.name + ' cover'"
       :src="$context.featured_media_large"
-      :quality="100"
-      class="w-full h-132.25"
+      :quality="'100'"
+      class="w-full h-48 xl:h-132.25"
     />
 
     <div class="w-full bg-white py-4">
@@ -42,13 +42,13 @@
               :alt="$context.name + ' logo'"
               :src="$context.logo"
               class="h-36 w-36 rounded-full"
-              :quality="100"
+              :quality="'100'"
             />
           </div>
           <h1
             class="
               font-semibold
-              text-3xl
+              text-4xl
               text-center
               xl:text-left
               mb-8

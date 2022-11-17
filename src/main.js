@@ -30,5 +30,22 @@ library.add(
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
-  Vue.component('font-awesome',FontAwesomeIcon)
+  Vue.component('font-awesome', FontAwesomeIcon)
+
+  Vue.directive('click-outside', {
+    bind(el, binding) {
+      const handler = (e) => {
+        if ((!el.contains(e.target) && el !== e.target)) {
+          binding.value(e);
+        }
+      }
+
+      el.__vueClickOutside__ = handler;
+      document.addEventListener('click', handler);
+    },
+    unbind(el) {
+      document.removeEventListener('click', el.__vueClickOutside__);
+      el.__vueClickOutside__ = null;
+    }
+  })
 }
