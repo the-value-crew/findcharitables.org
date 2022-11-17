@@ -2,62 +2,8 @@
   <Layout>
     <!-- hero -->
     <div class="p-4 xl:p-0">
-      <div
-        class="
-          xl:flex xl:justify-between
-          h-96
-          xl:h-166
-          overflow-hidden
-          relative
-        "
-      >
-        <div class="xl:w-1/2 bg-no-repeat xl:bg-rectangle xl:pl-1/10">
-          <p class="heading font-bold text-40px xl:text-54px mt-4 xl:mt-52">
-            “It’s not how much we give but how much love we put into giving”
-          </p>
-          <p
-            class="
-              heading
-              font-normal
-              xl:font-bold
-              text-base
-              xl:text-28px
-              mt-2
-              xl:mt-5
-            "
-          >
-            -Mother Teresa
-          </p>
-        </div>
-        <div
-          class="
-            xl:w-2/5
-            bg-no-repeat
-            xl:bg-rectangle xl:bg-right-bottom-5 xl:pr-1/10
-            -mt-10
-            xl:mt-0
-          "
-        >
-          <g-image
-            src="~/assets/images/circle.png"
-            class="absolute xl:hidden bottom-3 right-0"
-          />
-          <g-image
-            src="~/assets/images/mother-teresa.png"
-            class="
-              absolute
-              bottom-0
-              right-3
-              xl:static
-              w-45.5
-              xl:rounded-lg
-              rounded-t-full rounded-br-full
-              xl:w-full
-            "
-            alt="Mother Teresa"
-          />
-        </div>
-      </div>
+      <HomeHeroSectionVue />
+
       <div class="xl:hidden">
         <g-image src="~/assets/images/2-circle.png" />
       </div>
@@ -161,13 +107,14 @@
 import FaqList from "../components/FaqList.vue";
 import CharityProcess from "../components/CharityProcess.vue";
 import QuickForm from "../components/QuickForm.vue";
+import HomeHeroSectionVue from "../components/HomeHeroSection.vue";
 
 export default {
   metaInfo: {
     title: "Find Charitables",
   },
 
-  components: { FaqList, CharityProcess, QuickForm },
+  components: { FaqList, CharityProcess, QuickForm, HomeHeroSectionVue },
 
   methods: {
     toggleCollaspe(e) {

@@ -14,12 +14,15 @@ module.exports = {
   plugins: [],
   css: {
     loaderOptions: {
-     postcss: {
-      plugins: [
-        tailwindcss,
-        autoprefixer
-      ],
-     },
+      postcss: {
+        plugins: [
+          tailwindcss,
+          autoprefixer
+        ],
+      },
     },
-  }
+  },
+  chainWebpack: config => {
+    config.resolve.alias.set('@images', '@/assets/images')
+  },
 }
