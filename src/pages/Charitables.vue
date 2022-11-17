@@ -6,7 +6,7 @@
         <div
           class="
             flex flex-wrap
-            xl:block xl:w-1/4 xl:p-4
+            xl:block xl:w-1/4 xl:p-2 xl:h-auto
             mb-8
             xl:mb-0 xl:bg-white xl:rounded-lg xl:shadow
           "
@@ -20,38 +20,43 @@
               xl:m-0 xl:p-3 xl:justify-between
               items-center
               rounded-lg
-              bg-green-primary
-              xl:bg-white
+              border-2 border-green-primary
+              xl:border-0 xl:bg-white
               shadow
               xl:shadow-none
               my-2
               cursor-pointer
+              transition
             "
-            v-for="edge in $static.categories.edges"
-            :key="edge.node.id"
+            :class="{
+              'bg-green-secondary xl:bg-green-secondary':
+                selectedCategory == category.id,
+            }"
+            v-for="category in categories"
+            :key="category.id"
+            @click="() => (selectedCategory = category.id)"
           >
-            <p
-              class="text-white xl:text-text-primary xl:text-base"
-              v-html="edge.node.name"
-            ></p>
-            <p
-              class="text-white xl:text-text-muted xl:text-sm"
-              v-html="'(' + edge.node.count + ')'"
-            ></p>
+            <span class="text-green-primary xl:text-text-primary xl:text-base">
+              {{ category.name }}
+            </span>
+
+            <span class="text-green-primary xl:text-text-muted xl:text-sm">
+              ({{ category.count }})
+            </span>
           </div>
         </div>
 
         <div class="w-full xl:w-3/4 xl:ml-12 min-h-screen">
           <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
             <div
-              class="bg-white border xl:border-0 rounded-lg shadow max-w-md "
-              v-for="edge in $static.charities.edges"
-              :key="edge.node.id"
+              class="bg-white border xl:border-0 rounded-lg shadow max-w-md"
+              v-for="charity in filteredCharities"
+              :key="charity.id"
             >
               <!-- cover image -->
               <g-image
-                :alt="edge.node.name + ' cover'"
-                :src="edge.node.featured_media_medium"
+                :alt="charity.name + ' cover'"
+                :src="charity.featured_media_large"
                 class="w-full h-52 rounded-t-lg"
               />
 
@@ -68,8 +73,8 @@
                 "
               >
                 <g-image
-                  :alt="edge.node.name + ' logo'"
-                  :src="edge.node.logo"
+                  :alt="charity.name + ' logo'"
+                  :src="charity.logo"
                   :fit="'cover'"
                   class="h-20 w-20 rounded-full"
                 />
@@ -77,14 +82,14 @@
 
               <div class="py-4 px-4 -mt-10">
                 <a
-                  :href="'/' + edge.node.slug"
+                  :href="'/' + charity.slug"
                   class="
                     overflow-hidden
                     text-ellipsis
                     font-semibold
                     text-28px text-text-primary
                   "
-                  >{{ edge.node.name }}</a
+                  >{{ charity.name }}</a
                 >
 
                 <p
@@ -101,12 +106,10 @@
                     overflow-hidden
                   "
                 >
-                  We have been working for 100 years. Education, typewriting,
-                  child care, we do everything. There is nothing we dont
-                  do.nothing we dont do. If you have money to donate
+                  {{ charity.excerpt }}
                 </p>
                 <a
-                  :href="'/' + edge.node.slug"
+                  :href="'/' + charity.slug"
                   class="
                     block
                     btn-primary
@@ -126,6 +129,29 @@
               </div>
             </div>
           </div>
+          <div
+            v-show="!filteredCharities.length"
+            class="w-full text-center my-16"
+          >
+            <p class="text-xl text-text-secondary">
+              No match found according to your preferences!
+            </p>
+
+            <button
+              class="
+                btn-primary
+                rounded
+                text-white text-base
+                px-8
+                py-4
+                my-8
+                font-normal
+              "
+              @click="() => (selectedCategory = 'all')"
+            >
+              Reset filters
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -140,6 +166,8 @@ query {
                 id
                 name
                 slug
+                excerpt
+                category
                 featured_media_large
                 featured_media_medium
                 featured_media_thumbnail
@@ -161,8 +189,47 @@ query {
 
 <script>
 export default {
+  name: "Charitables",
   metaInfo: {
     title: "Charity List",
+  },
+
+  data() {
+    return {
+      categories: null,
+      charities: null,
+      selectedCategory: null,
+    };
+  },
+
+  created() {
+    this.categories = this.$static.categories.edges.map((edge) => edge.node);
+    this.charities = this.$static.charities.edges.map((edge) => {
+      return {
+        ...edge.node,
+        category: edge.node.category
+          ? edge.node.category.map((c) => c.toString())
+          : [],
+      };
+    });
+
+    this.categories.unshift({
+      id: "all",
+      name: "All",
+      count: this.charities.length,
+    });
+    this.selectedCategory = "all";
+  },
+
+  computed: {
+    filteredCharities() {
+      if (this.selectedCategory == "all") return this.charities;
+      return this.charities.filter((charity) =>
+        charity.category
+          ? charity.category.includes(this.selectedCategory)
+          : false
+      );
+    },
   },
 };
 </script>

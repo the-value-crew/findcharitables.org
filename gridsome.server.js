@@ -16,18 +16,18 @@ module.exports = function (api) {
     const categoryCollection = actions.addCollection('Category')
     const algolia = []
 
-    for(const item of data) {
+    for (const item of data) {
       const category = []
-      if(item.category)
-      {
+      if (item.category) {
         item.category.forEach(element => {
-          category.push(element.name)
+          category.push(element.term_id)
         });
       }
-      
+
       collection.addNode({
         id: item.id,
         name: item.name,
+        excerpt: item.excerpt,
         slug: item.slug,
         content: item.content,
         featured_media_large: item.featured_image.large,
@@ -46,11 +46,11 @@ module.exports = function (api) {
         article_modified_time: item.metadata.article_modified_time,
         twitter_card: item.metadata.twitter_card,
         reading_time: item.metadata.twitter_misc["Est. reading time"],
-        robots: item.metadata.robots.index + ', ' 
-                + item.metadata.robots.follow + ', ' 
-                + item.metadata.robots['max-snippet'] + ', ' 
-                + item.metadata.robots['max-image-preview'] + ', '
-                + item.metadata.robots['max-video-preview']
+        robots: item.metadata.robots.index + ', '
+          + item.metadata.robots.follow + ', '
+          + item.metadata.robots['max-snippet'] + ', '
+          + item.metadata.robots['max-image-preview'] + ', '
+          + item.metadata.robots['max-video-preview']
       })
 
       //collection for algolia searchable
@@ -58,14 +58,15 @@ module.exports = function (api) {
         objectID: item.id,
         name: item.name,
         logo: item.logo,
-        slug: item.slug
+        slug: item.slug,
+        category: item.category
       })
     }
 
     //make collection of category
-    for(const item of category_data.data) {
+    for (const item of category_data.data) {
       categoryCollection.addNode({
-        id: item.id,
+        id: item.term_id,
         name: item.name,
         slug: item.slug,
         count: item.count
@@ -79,18 +80,19 @@ module.exports = function (api) {
         console.log(objectIDs);
       });
     })
-    
+
   })
 
   api.createPages(async ({ createPage, graphql }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
-    const {data} = await graphql(`{
+    const { data } = await graphql(`{
       allCharity {
         edges {
           node {
             id
             name
             slug
+            excerpt
             content
             featured_media_large
             featured_media_medium

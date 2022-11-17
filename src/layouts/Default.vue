@@ -18,16 +18,16 @@
     >
       <div class="mx-4 p-4 xl:w-1/2 xl:max-w-xl xl:p-8 bg-white rounded z-50">
         <div class="flex justify-between items-center">
-          <h1 class="text-3xl font-bold">Initial data collection</h1>
+          <h1 class="text-3xl font-semibold text-text-primary">Initial data collection</h1>
 
           <font-awesome
             :icon="['fa', 'times-circle']"
-            class="cursor-pointer"
+            class="cursor-pointer text-text-secondary text-2xl"
             @click="showDialog = false"
           />
         </div>
 
-        <p class="my-8">
+        <p class="my-8 text-lg">
           We are collecting data for initial phase. If you are a suitale
           organization to fit our list, or you know someone who may be a fit,
           please fill up the form and become a part of us.
@@ -171,7 +171,7 @@
                 <g-link to="/">Home</g-link>
               </li>
               <li>
-                <g-link to="/search">Search</g-link>
+                <g-link to="/charitables">Search</g-link>
               </li>
               <li>
                 <g-link to="/about">About</g-link>
@@ -254,7 +254,7 @@
           >
           <g-link
             class="text-text-secondary my-4"
-            to="/search/"
+            to="/charitables/"
             @click="mobileNav = false"
             >Charities</g-link
           >

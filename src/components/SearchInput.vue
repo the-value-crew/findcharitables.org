@@ -12,6 +12,7 @@
         class="focus:outline-none w-full p-1 bg-transparent"
         v-on:input="search"
         v-model="searchKeyword"
+        autocomplete="off"
       />
     </div>
 
