@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col xl:flex-row xl:justify-evenly">
+  <div class="flex flex-col xl:grid xl:grid-cols-3 xl:gap-16">
     <!-- search -->
-    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+    <div class="flex flex-col mb-20 mx-4 xl:m-0">
       <div
         class="
           bg-white
@@ -36,12 +36,12 @@
         Head on to
         <g-link to="/charitables" class="app-link">charitables</g-link>
         list and choose the type of organization you want to donate to i.e. an orphanage,
-        old-age home, schools etc.
+        schools etc. Study them in detail regarding what they accept in donation.
       </p>
     </div>
 
     <!-- select -->
-    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+    <div class="flex flex-col mb-20 mx-4 xl:m-0">
       <div
         class="
           bg-white
@@ -80,7 +80,7 @@
     </div>
 
     <!-- donate -->
-    <div class="flex flex-col mb-20 mx-4 xl:mx-0 xl:mr-20">
+    <div class="flex flex-col mb-20 mx-4 xl:m-0">
       <div
         class="
           bg-white

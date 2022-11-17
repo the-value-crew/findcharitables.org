@@ -2,16 +2,23 @@
   <Layout>
     <!-- hero -->
     <div class="relative h-160 -mt-15">
-      <div
-        class="hidden xl:flex justify-between items-end -z-50"
-      >
+      <div class="hidden xl:flex justify-between items-end -z-50">
         <div class="bg-green-secondary h-191 w-1/2 rounded-150px"></div>
         <div class="bg-green-secondary h-160 rounded-l-full w-60.5"></div>
       </div>
       <div class="xl:absolute w-full px-4 xl:px-0 inset-0 py-10">
         <div class="flex mt-14 items-center">
           <div class="xl:w-2/5 xl:pt-15 xl:pl-1/10">
-            <p class="heading font-bold text-5xl xl:text-54px text-center xl:text-left">
+            <p
+              class="
+                heading
+                font-bold
+                text-5xl
+                xl:text-54px
+                text-center
+                xl:text-left
+              "
+            >
               Why this project?
             </p>
             <p class="mt-7 text-xl text-justify xl:text-left">
@@ -26,7 +33,8 @@
 
             <div class="mt-8 flex justify-center xl:mt-16 xl:justify-start">
               <a href="#contribute" class="btn-primary-light px-6.5 py-4.5">
-                Contribute to our endeavour
+                <font-awesome :icon="['fa', 'hand-fist']" class="mr-2" />
+                Contribute us
               </a>
             </div>
           </div>
@@ -52,7 +60,9 @@
         rounded-lg
       "
     >
-      <p class="uppercase font-bold text-5xl xl:text-54px text-center">OUR TEAM</p>
+      <p class="uppercase font-bold text-5xl xl:text-54px text-center">
+        OUR TEAM
+      </p>
       <div
         class="
           flex flex-col
@@ -62,7 +72,7 @@
         "
       >
         <div class="flex flex-col xl:flex-row items-center">
-          <div class="h-37.5 w-37.5 rounded-full bg-red-200">
+          <div class="h-37.5 w-37.5 rounded-full">
             <g-image
               src="~/assets/images/team/bibhuti.jpeg"
               class="w-auto h-auto rounded-full"
@@ -75,7 +85,7 @@
         </div>
 
         <div class="flex flex-col xl:flex-row items-center">
-          <div class="h-37.5 w-37.5 rounded-full bg-red-200">
+          <div class="h-37.5 w-37.5 rounded-full">
             <g-image
               src="~/assets/images/team/kishor.png"
               class="w-auto h-auto rounded-full"
@@ -88,7 +98,7 @@
         </div>
 
         <div class="flex flex-col xl:flex-row items-center">
-          <div class="h-37.5 w-37.5 rounded-full bg-red-200">
+          <div class="h-37.5 w-37.5 rounded-full">
             <g-image
               src="~/assets/images/team/roshan.jpeg"
               class="w-auto h-auto rounded-full"
@@ -101,7 +111,7 @@
         </div>
 
         <div class="flex flex-col xl:flex-row items-center">
-          <div class="h-37.5 w-37.5 rounded-full bg-red-200">
+          <div class="h-37.5 w-37.5 rounded-full">
             <g-image
               src="~/assets/images/team/shrijal.jpeg"
               class="w-auto h-auto rounded-full"
@@ -122,7 +132,17 @@
           <g-image src="~/assets/images/about_us.svg" class="h-auto w-full" />
         </div>
         <div class="xl:w-1/2 xl:pl-8 text-justify xl:text-left">
-          <p class="font-bold text-5xl xl:text-54px mb-8 heading text-center xl:text-left">
+          <p
+            class="
+              font-bold
+              text-5xl
+              xl:text-54px
+              mb-8
+              heading
+              text-center
+              xl:text-left
+            "
+          >
             About Us
           </p>
           <p class="text-xl">
@@ -157,7 +177,8 @@
         <p
           class="
             heading
-            text-5xl xl:text-54px
+            text-5xl
+            xl:text-54px
             font-bold
             mb-16
             xl:mb-24
@@ -174,16 +195,7 @@
     <!-- Contribute -->
     <div class="bg-white mt-6 py-16 xl:py-25">
       <div class="container" id="contribute">
-        <p
-          class="
-            heading
-            text-54px
-            font-bold
-            mb-16
-            text-center
-            xl:text-left
-          "
-        >
+        <p class="heading text-54px font-bold mb-16 text-center xl:text-left">
           Contribute
         </p>
 

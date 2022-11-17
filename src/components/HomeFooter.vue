@@ -16,31 +16,31 @@
           </p>
         </div>
 
-        <div id="quick-link">
-          <p class="uppercase">quick link</p>
+        <div id="quick-link" class="text-text-primary">
+          <p class="uppercase font-bold">quick link</p>
           <ol class="mt-5">
-            <li>
+            <li class="my-2">
               <g-link to="/">Home</g-link>
             </li>
-            <li>
+            <li class="my-2">
               <g-link to="/charitables">Search</g-link>
             </li>
-            <li>
+            <li class="my-2">
               <g-link to="/about">About</g-link>
             </li>
           </ol>
         </div>
 
-        <div id="support">
-          <p class="uppercase">support</p>
+        <div id="support" class="text-text-primary">
+          <p class="uppercase font-bold text-text-primary">support</p>
           <ol class="mt-5">
-            <li>
+            <li class="my-2">
               <g-link to="/privacy-policy">Privacy policy</g-link>
             </li>
-            <li>
+            <li class="my-2">
               <g-link to="/#faqs">FAQs</g-link>
             </li>
-            <li>
+            <li class="my-2">
               <g-link to="/about#contribute">Contribute</g-link>
             </li>
           </ol>

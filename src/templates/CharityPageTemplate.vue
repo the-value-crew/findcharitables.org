@@ -47,6 +47,7 @@
           </div>
           <h1
             class="
+              heading
               font-semibold
               text-4xl
               text-center

@@ -17,7 +17,13 @@
             relative
           "
         >
-          <div class="xl:w-1/2 bg-no-repeat xl:bg-rectangle xl:pl-1/10">
+          <div
+            class="
+              xl:w-1/2
+              bg-no-repeat
+              xl:bg-rectangle xl:pl-1/10 xl:flex xl:flex-col
+            "
+          >
             <p class="heading font-bold text-4xl xl:text-6xl mt-4 xl:mt-52">
               “{{ quote.text }}”
             </p>
@@ -34,6 +40,25 @@
             >
               -{{ quote.author }}
             </p>
+
+            <!-- cta desktop -->
+            <g-link
+              class="
+                hidden
+                xl:block
+                btn-primary
+                text-white
+                rounded-lg
+                px-8
+                py-4
+                mt-10
+                self-start
+              "
+              :to="quote.ctaLink"
+            >
+              <font-awesome :icon="['fa', quote.ctaIcon]" class="mr-2" />
+              {{ quote.ctaText }}
+            </g-link>
           </div>
 
           <div
@@ -45,6 +70,26 @@
               xl:mt-0
             "
           >
+            <!-- cta mobile -->
+            <g-link
+              class="
+                xl:hidden
+                absolute
+                bottom-0
+                left-0
+                btn-primary
+                text-white
+                rounded-lg
+                px-4
+                py-2
+                mt-4
+              "
+              :to="quote.ctaLink"
+            >
+              <font-awesome :icon="['fa', quote.ctaIcon]" class="mr-2" />
+              {{ quote.ctaText }}
+            </g-link>
+
             <g-image
               src="~/assets/images/circle.png"
               class="absolute xl:hidden bottom-0 right-0 w-40 -z-1 xl:w-auto"
@@ -94,18 +139,27 @@ export default {
           text: "Give what you have to give, it will come back to you, but do not think of that now.",
           author: "Swami Vivekananda",
           authorImg: "vivekananda.jpg",
+          ctaIcon: "hand-holding-heart",
+          ctaText: "Donate now",
+          ctaLink: "/charitables",
         },
 
         {
           text: "It's not how much we give but how much love we put into giving.",
           author: "Mother Teresa",
           authorImg: "mother-teresa.png",
+          ctaIcon: "lightbulb",
+          ctaText: "Know more",
+          ctaLink: "/#faqs",
         },
 
         {
           text: "If you light a lamp for somebody, it will also brighten your path.",
           author: "Gautam Buddha",
           authorImg: "buddha.jpg",
+          ctaIcon: "hand-fist",
+          ctaText: "Contribute us",
+          ctaLink: "/about#contribute",
         },
       ],
     };
