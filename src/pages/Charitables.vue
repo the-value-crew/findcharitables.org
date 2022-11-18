@@ -5,7 +5,7 @@
         <!-- categories -->
         <div
           class="
-            flex flex-wrap
+            flex flex-wrap justify-center
             xl:block xl:w-1/4 xl:p-2 xl:h-auto
             mb-8
             xl:mb-0 xl:bg-white xl:rounded-lg xl:shadow
@@ -48,7 +48,7 @@
         </div>
 
         <div class="w-full xl:w-3/4 xl:ml-12 min-h-screen">
-          <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+          <div class="grid grid-cols-1 place-items-center xl:grid-cols-2 gap-12">
             <div
               class="bg-white border xl:border-0 rounded-lg shadow max-w-md"
               v-for="charity in filteredCharities"

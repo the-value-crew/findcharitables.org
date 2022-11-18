@@ -75,19 +75,21 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center">
-          <g-link class="text-text-secondary" to="/">Home</g-link>
-          <g-link class="text-text-secondary ml-12" to="/charitables/">
+          <g-link class="text-text-secondary ml-8 xl:ml-0" to="/">Home</g-link>
+          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/charitables/">
             Charitables
           </g-link>
-          <g-link class="text-text-secondary ml-12" to="/about/">About</g-link>
+          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/about/">About</g-link>
 
           <button
             class="
               btn-primary
               text-white
               rounded-lg
-              py-4
-              px-7
+              py-2
+              px-4
+              xl:py-4
+              xl:px-7
               ml-12
               flex
               items-center
@@ -101,9 +103,10 @@
                 h-5
                 bg-white
                 mr-2
-                grid
                 place-items-center
                 relative
+                hidden
+                xl:grid
               "
             >
               <div
@@ -144,7 +147,7 @@
     </div>
 
     <!-- route content goes here -->
-    <div class="pt-24">
+    <div class="pt-24 md:w-4/6 md:mx-auto xl:w-full">
       <slot />
     </div>
 

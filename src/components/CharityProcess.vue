@@ -18,7 +18,7 @@
       >
         <g-image
           src="~/assets/images/charity_process/search.png"
-          class="h-1/2 w-auto"
+          class="w-1/2 h-auto"
         />
       </div>
       <p
@@ -35,8 +35,9 @@
       <p class="text-text-secondary text-justify text-lg">
         Head on to
         <g-link to="/charitables" class="app-link">charitables</g-link>
-        list and choose the type of organization you want to donate to i.e. an orphanage,
-        schools etc. Study them in detail regarding what they accept in donation.
+        list and choose the type of organization you want to donate to i.e. an
+        orphanage, schools etc. Study them in detail regarding what they accept
+        in donation.
       </p>
     </div>
 
@@ -58,7 +59,7 @@
       >
         <g-image
           src="~/assets/images/charity_process/select.png"
-          class="h-1/2 w-auto"
+          class="w-1/2 h-auto"
         />
       </div>
       <p
@@ -73,9 +74,9 @@
         Select
       </p>
       <p class="text-text-secondary text-justify text-lg">
-        Select organization that aligns with your values by going through
-        their details to scale the credibility. We recommend contacting
-        them to inquire how your aid will be used.
+        Select organization that aligns with your values by going through their
+        details to scale the credibility. We recommend contacting them to
+        inquire how your aid will be used.
       </p>
     </div>
 
@@ -97,7 +98,7 @@
       >
         <g-image
           src="~/assets/images/charity_process/donate.png"
-          class="h-1/2 w-auto"
+          class="w-1/2 h-auto"
         />
       </div>
       <p
