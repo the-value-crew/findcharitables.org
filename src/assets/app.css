@@ -28,4 +28,15 @@
 a.active--exact {
     @apply text-green-primary;
 }
+
+/* 
+Tailwind has issue with h-screen
+https://benborgers.com/posts/tailwind-h-screen
+*/
+@supports (-webkit-touch-callout: none) {
+    .h-screen {
+        height: -webkit-fill-available;
+    }
+}
+
 @tailwind utilities;
