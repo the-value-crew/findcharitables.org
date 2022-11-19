@@ -56,7 +56,7 @@
           "
           v-for="(result, index) in searchResult"
           :key="index"
-          :to="'/' + result.slug"
+          :to="'/charitables/' + result.slug"
         >
           <g-image :src="result.logo" class="w-12 h-12 rounded-full" />
 
