@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+body {
+    @apply text-text-primary;
+}
+
 .container {
     @apply w-11/12 xl:w-4/5 m-auto;
 }
@@ -25,7 +29,7 @@
     @apply text-green-primary italic underline;
 }
 
-a.active--exact {
+nav a.active {
     @apply text-green-primary;
 }
 

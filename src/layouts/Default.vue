@@ -75,11 +75,11 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center">
-          <g-link class="text-text-secondary ml-8 xl:ml-0" to="/">Home</g-link>
-          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/charitables/">
+          <g-link class="text-text-secondary ml-8 xl:ml-0" to="/" exact>Home</g-link>
+          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/charitables">
             Charitables
           </g-link>
-          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/about/">About</g-link>
+          <g-link class="text-text-secondary ml-8 xl:ml-12" to="/about" exact>About</g-link>
 
           <button
             class="

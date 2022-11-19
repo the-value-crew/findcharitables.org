@@ -5,7 +5,8 @@
         <!-- categories -->
         <div
           class="
-            flex flex-wrap justify-center
+            flex flex-wrap
+            justify-center
             xl:block xl:w-1/4 xl:p-2 xl:h-auto
             mb-8
             xl:mb-0 xl:bg-white xl:rounded-lg xl:shadow
@@ -26,7 +27,7 @@
               xl:shadow-none
               my-2
               cursor-pointer
-              transition 
+              transition
               select-none
             "
             :class="{
@@ -48,7 +49,9 @@
         </div>
 
         <div class="w-full xl:w-3/4 xl:ml-12 min-h-screen">
-          <div class="grid grid-cols-1 place-items-center xl:grid-cols-2 gap-12">
+          <div
+            class="grid grid-cols-1 place-items-center xl:grid-cols-2 gap-12"
+          >
             <div
               class="bg-white border xl:border-0 rounded-lg shadow max-w-md"
               v-for="charity in filteredCharities"
@@ -84,18 +87,19 @@
               </div>
 
               <div class="py-4 px-4 -mt-10">
-                <a
-                  :href="'/' + charity.slug"
+                <g-link
+                  :to="`/charitables/${charity.slug}`"
                   class="
                     overflow-hidden
                     text-ellipsis
                     font-semibold
-                    block mb-4
+                    block
+                    mb-4
                     text-2xl text-center
-                    xl:text-left
-                    xl:text-28px text-text-primary
+                    xl:text-left xl:text-28px
+                    text-text-primary
                   "
-                  >{{ charity.name }}</a
+                  >{{ charity.name }}</g-link
                 >
 
                 <p
@@ -113,8 +117,8 @@
                 >
                   {{ charity.excerpt }}
                 </p>
-                <a
-                  :href="'/' + charity.slug"
+                <g-link
+                  :to="`/charitables/${charity.slug}`"
                   class="
                     block
                     btn-primary
@@ -130,7 +134,7 @@
                     class="text-white mr-2"
                   />
                   Donate
-                </a>
+                </g-link>
               </div>
             </div>
           </div>
@@ -198,7 +202,7 @@ query {
 export default {
   name: "Charitables",
   metaInfo: {
-    title: "Charity List",
+    title: "Charitables - FindCharitables",
   },
 
   data() {

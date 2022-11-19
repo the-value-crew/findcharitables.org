@@ -46,13 +46,51 @@
           </ol>
         </div>
 
-        <div id="social-media">
+        <div id="social-media" class="flex flex-col items-end">
           <a href="https://www.buymeacoffee.com/findcharitable" target="_blank"
             ><img
               src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png"
               alt="Buy Me A Coffee"
-              style="height: 60px !important; width: 217px !important"
+              style="height: 60px !important; width: 218px !important"
           /></a>
+          <div class="flex justify-end mt-2">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=the-value-crew&repo=findcharitables.org&type=star&count=true"
+              frameborder="0"
+              scrolling="0"
+              width="109"
+              height="20"
+              title="GitHub"
+            ></iframe>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=the-value-crew&repo=findcharitables.org&type=fork&count=true"
+              frameborder="0"
+              scrolling="0"
+              width="109"
+              height="20"
+              title="GitHub"
+            ></iframe>
+          </div>
+
+          <div class="flex flex-col mt-2">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=the-value-crew&type=follow&count=true"
+              frameborder="0"
+              scrolling="0"
+              width="218"
+              height="20"
+              title="GitHub"
+            ></iframe>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=the-value-crew&type=sponsor"
+              frameborder="0"
+              scrolling="0"
+              width="218"
+              height="20"
+              title="GitHub"
+              class="mt-2"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

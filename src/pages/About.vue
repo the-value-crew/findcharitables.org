@@ -250,7 +250,7 @@
 import CharityProcess from "../components/CharityProcess.vue";
 export default {
   metaInfo: {
-    title: "About us",
+    title: "About - FindCharitables",
   },
   components: { CharityProcess },
 };

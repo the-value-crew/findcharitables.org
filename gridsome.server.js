@@ -118,7 +118,7 @@ module.exports = function (api) {
 
     data.allCharity.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.slug}`,
+        path: `/charitables/${node.slug}`,
         component: './src/templates/CharityPageTemplate.vue',
         context: {
           id: node.id,

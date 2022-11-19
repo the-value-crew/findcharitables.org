@@ -211,7 +211,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Privacy policy",
+    title: "Privacy policy - FindCharitables",
   },
   name: "PrivacyPolicy",
 };
