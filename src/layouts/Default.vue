@@ -19,7 +19,7 @@
       <div class="mx-4 p-4 xl:w-1/2 xl:max-w-xl xl:p-8 bg-white rounded z-50">
         <div class="flex justify-between items-center">
           <h1 class="text-3xl font-semibold text-text-primary">
-            Initial data collection
+            Get listed on FindCharitables
           </h1>
 
           <font-awesome
@@ -30,7 +30,7 @@
         </div>
 
         <p class="my-8 text-lg">
-          We are collecting data for initial phase. If you are a suitale
+          We are collecting data for initial phase. If you are a suitable
           organization to fit our list, or you know someone who may be a fit,
           please fill up the form and become a part of us.
         </p>
