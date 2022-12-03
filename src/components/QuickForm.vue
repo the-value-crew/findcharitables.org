@@ -11,7 +11,6 @@
         outline-none
         focus:border-green-primary
         transition-all
-        xl:w-1/3
         w-full
       "
       v-model="form.name"
@@ -23,12 +22,11 @@
       class="
         rounded-lg
         border
-        xl:w-1/3
         mt-7
         p-3
         flex
         items-center
-        mb-12
+        mb-6
         focus-within:border-green-primary
         transition-all
       "
@@ -49,6 +47,13 @@
       />
     </fieldset>
 
+    <p class="text-lg">Terms and conditions</p>
+    <ul class="eligibility-list mb-12">
+      <li>I am a charitable institution intended to serve humanity</li>
+      <li>I have a historical record of the best use of donations</li>
+      <li>I agree to publicise(via social media) the use of the donation</li>
+    </ul>
+
     <a
       class="
         btn-primary
@@ -60,8 +65,7 @@
         block
         w-full
         text-center
-        xl:inline
-        xl:w-auto
+        xl:inline xl:w-auto
       "
       target="_blank"
       :href="formLink"
@@ -92,5 +96,9 @@ export default {
 };
 </script>
 
+
 <style>
+.eligibility-list li {
+  @apply my-2 text-text-secondary;
+}
 </style>

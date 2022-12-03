@@ -7,6 +7,10 @@ const c6 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/
 
 export default [
   {
+    path: "/charitables/saheed-adarsha-higher-secondary-school/",
+    component: c1
+  },
+  {
     path: "/charitables/pranavananda-ashram/",
     component: c1
   },

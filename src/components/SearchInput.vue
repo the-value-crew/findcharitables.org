@@ -3,6 +3,7 @@
     <!-- Search input -->
     <div
       class="
+        relative
         border-2
         bg-gray-50
         rounded-lg
@@ -16,7 +17,7 @@
       "
       :class="{ 'rounded-b-none': searchFocus }"
     >
-      <span class="p-2">
+      <span class="p-2" v-show="showSearchIcon">
         <font-awesome :icon="['fa', 'search']" class="text-gray-400" />
       </span>
       <input
@@ -25,14 +26,34 @@
         name="search"
         placeholder="Find charitables"
         class="focus:outline-none w-full p-1 bg-transparent"
+        :class="{ 'px-2 py-1': !showSearchIcon, 'p-1': showSearchIcon }"
         @input="search"
         @focus="handleFocus"
         @blur="handleBlur"
         autocomplete="off"
       />
+
+      <div
+        class="
+          flex
+          absolute
+          top-1/2
+          right-1
+          transform
+          -translate-y-1/2
+          transition
+          ease-in-out
+          duration-200
+          cursor-default
+        "
+        :class="{ 'opacity-0': searchFocus, 'opacity-100': !searchFocus }"
+        v-show="!hasTouchSupport"
+      >
+        <div class="search-shortcut-key mr-1">⌘</div>
+        <div class="search-shortcut-key">K</div>
+      </div>
     </div>
 
-  
     <div>
       <!-- search results -->
       <div
@@ -131,6 +152,7 @@
 
 <script>
 import algoliasearch from "algoliasearch";
+import { isMobile, hasTouchSupport } from "../helpers/device";
 
 export default {
   name: "SearchInput",
@@ -141,6 +163,26 @@ export default {
       searchKeyword: null,
       searchResult: null,
       searchTimer: null,
+
+      shortcutkeys: {
+        Meta: false,
+        k: false,
+      },
+    };
+  },
+
+  mounted() {
+    document.onkeydown = (e) => {
+      e.preventDefault();
+      this.shortcutkeys[e.key] = true;
+      if (this.shortcutkeys.Meta && this.shortcutkeys.k)
+        this.searchFocus = true;
+      if (e.key == "Escape") this.searchFocus = false;
+    };
+
+    document.onkeyup = (e) => {
+      e.preventDefault();
+      this.shortcutkeys[e.key] = false;
     };
   },
 
@@ -193,8 +235,29 @@ export default {
       }, 100);
     },
   },
+
+  computed: {
+    hasTouchSupport() {
+      if (process.isClient) return hasTouchSupport();
+      return false;
+    },
+
+    showSearchIcon() {
+      if (process.isClient) return !isMobile();
+    },
+  },
 };
 </script>
 
 <style>
+.search-shortcut-key {
+  @apply border-2
+            text-gray-300
+            bg-gray-100
+            rounded-md
+            w-8
+            h-8
+            leading-relaxed
+            text-center;
+}
 </style>

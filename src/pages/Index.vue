@@ -43,7 +43,11 @@
         <p class="heading font-bold text-28px xl:text-54px">
           Add your charity to the list
         </p>
-        <QuickForm />
+        <div class="flex flex-wrap">
+          <div class="xl:mr-16 xl:w-1/2">
+            <QuickForm />
+          </div>
+        </div>
         <div class="xl:hidden absolute left-2/4 mt-5">
           <g-image src="~/assets/images/2-circle-flipped.png" />
         </div>
